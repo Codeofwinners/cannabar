@@ -126,46 +126,69 @@
 <div class="absolute inset-0 bg-burgundy/20 mix-blend-multiply z-10"></div>
 <div class="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-[#1a0505] via-[#1a0505]/90 to-transparent z-10"></div>
 </div>
-<div class="relative z-20 px-6 lg:px-16 xl:px-24 pt-16 lg:pt-24 pb-8 lg:pb-16 flex flex-col max-w-[1920px] mx-auto">
+<div class="relative z-20 px-6 lg:px-20 xl:px-32 pt-20 lg:pt-32 pb-8 lg:pb-20 flex flex-col max-w-[1920px] mx-auto w-full">
 <!-- MOBILE LAYOUT -->
-<div class="flex flex-col items-center text-center lg:hidden">
-<h1 class="font-serif text-5xl sm:text-6xl font-medium leading-[1.05] text-white tracking-tight drop-shadow-lg [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)] mb-8">
-Valentine's Day at<br/>
-<span class="text-vred-light [text-shadow:_0_0_20px_rgba(232,65,66,0.6),_0_2px_4px_rgba(0,0,0,0.9)]">The Canna Bar</span>
+<div class="flex flex-col lg:hidden">
+<!-- Hero Title - Left aligned, editorial style -->
+<div class="mb-12">
+<p class="text-sm font-medium tracking-[0.3em] uppercase text-white/60 mb-4">Limited Time Offer</p>
+<h1 class="font-serif text-[3.5rem] leading-[0.95] text-white tracking-tight [text-shadow:_0_4px_30px_rgba(0,0,0,0.8)]">
+Valentine's<br/>Day at<br/>
+<span class="text-vred-light">The Canna Bar</span>
 </h1>
-<!-- Bundle Deal Card -->
-<div class="w-full max-w-md bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 p-6 flex flex-col items-center gap-4">
-<p class="text-sm font-semibold tracking-[0.25em] uppercase text-white/80">The Bundle Deal</p>
-<h2 class="font-serif text-6xl text-vred-light font-medium [text-shadow:_0_0_25px_rgba(232,65,66,0.7),_0_2px_4px_rgba(0,0,0,0.9)]">SAVE 25%</h2>
-<p class="text-lg text-white font-light leading-relaxed [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
-Build a bundle of <span class="text-white font-semibold">4 or more items</span> and take <span class="text-vred-light font-semibold">25% off</span> your entire order.
+</div>
+<!-- Bundle Deal - Clean minimal style -->
+<div class="relative">
+<div class="flex items-baseline gap-3 mb-4">
+<span class="text-[7rem] leading-none font-serif text-vred-light font-medium tracking-tight [text-shadow:_0_0_40px_rgba(232,65,66,0.5)]">25</span>
+<div class="flex flex-col">
+<span class="text-4xl font-serif text-vred-light">%</span>
+<span class="text-xl font-medium text-white uppercase tracking-wider">OFF</span>
+</div>
+</div>
+<p class="text-xl text-white/90 font-light leading-relaxed mb-6 max-w-sm [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
+Build a bundle of <span class="text-white font-semibold">4+ items</span> and save on your entire order.
 </p>
-<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-2"></div>
-<p class="text-base text-white/90 font-medium [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
-Choose from: Flower · Pre-Rolls · Diamonds · Chocolate Edibles · Infused Spreads
-</p>
+<!-- Category Pills -->
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm text-white/90 border border-white/10">Flower</span>
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm text-white/90 border border-white/10">Pre-Rolls</span>
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm text-white/90 border border-white/10">Diamonds</span>
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm text-white/90 border border-white/10">Edibles</span>
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm text-white/90 border border-white/10">Spreads</span>
+</div>
 </div>
 </div>
 <!-- DESKTOP LAYOUT -->
-<div class="hidden lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-16 xl:gap-24 w-full">
+<div class="hidden lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-32 w-full items-center">
 <!-- Left: Main Headline -->
-<div class="flex-1 text-left">
-<h1 class="font-serif text-7xl xl:text-8xl font-medium leading-[1.05] text-white tracking-tight drop-shadow-lg [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
-Valentine's Day at<br/>
-<span class="text-vred-light [text-shadow:_0_0_20px_rgba(232,65,66,0.6),_0_2px_4px_rgba(0,0,0,0.9)]">The Canna Bar</span>
+<div>
+<p class="text-base font-medium tracking-[0.3em] uppercase text-white/50 mb-6">Limited Time Offer</p>
+<h1 class="font-serif text-7xl xl:text-8xl 2xl:text-9xl leading-[0.95] text-white tracking-tight [text-shadow:_0_4px_30px_rgba(0,0,0,0.8)]">
+Valentine's<br/>Day at<br/>
+<span class="text-vred-light">The Canna Bar</span>
 </h1>
 </div>
-<!-- Right: Bundle Deal Card -->
-<div class="flex-shrink-0 w-full max-w-lg bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 p-8 xl:p-10 flex flex-col gap-5">
-<p class="text-base font-semibold tracking-[0.25em] uppercase text-white/80">The Bundle Deal</p>
-<h2 class="font-serif text-6xl xl:text-7xl text-vred-light font-medium [text-shadow:_0_0_25px_rgba(232,65,66,0.7),_0_2px_4px_rgba(0,0,0,0.9)]">SAVE 25%</h2>
-<p class="text-xl xl:text-2xl text-white font-light leading-relaxed [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
-Build a bundle of <span class="text-white font-semibold">4 or more items</span> and take <span class="text-vred-light font-semibold">25% off</span> your entire order.
+<!-- Right: Bundle Deal - Bold typography -->
+<div class="flex flex-col">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="text-[12rem] xl:text-[14rem] leading-none font-serif text-vred-light font-medium tracking-tight [text-shadow:_0_0_60px_rgba(232,65,66,0.4)]">25</span>
+<div class="flex flex-col">
+<span class="text-6xl xl:text-7xl font-serif text-vred-light">%</span>
+<span class="text-2xl xl:text-3xl font-semibold text-white uppercase tracking-wider">OFF</span>
+</div>
+</div>
+<p class="text-2xl xl:text-3xl text-white/90 font-light leading-relaxed mb-8 max-w-md [text-shadow:_0_2px_15px_rgba(0,0,0,0.9)]">
+Build a bundle of <span class="text-white font-semibold">4+ items</span> and save on your entire order.
 </p>
-<div class="w-full h-px bg-gradient-to-r from-white/20 via-white/10 to-transparent my-1"></div>
-<p class="text-lg xl:text-xl text-white/90 font-medium [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
-Choose from: Flower · Pre-Rolls · Diamonds · Chocolate Edibles · Infused Spreads
-</p>
+<!-- Category Pills -->
+<div class="flex flex-wrap gap-3">
+<span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm text-base text-white/90 border border-white/10 hover:bg-white/20 transition-colors cursor-default">Flower</span>
+<span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm text-base text-white/90 border border-white/10 hover:bg-white/20 transition-colors cursor-default">Pre-Rolls</span>
+<span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm text-base text-white/90 border border-white/10 hover:bg-white/20 transition-colors cursor-default">Diamonds</span>
+<span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm text-base text-white/90 border border-white/10 hover:bg-white/20 transition-colors cursor-default">Chocolate Edibles</span>
+<span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm text-base text-white/90 border border-white/10 hover:bg-white/20 transition-colors cursor-default">Infused Spreads</span>
+</div>
 </div>
 </div>
 </div>
