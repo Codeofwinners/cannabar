@@ -44,13 +44,81 @@
     body {
       min-height: max(884px, 100dvh);
     }
+    /* Hide scrollbar for swipeable sections */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Luxurious heart color animation */
+    @keyframes heartPulse {
+      0%, 100% {
+        color: #DC143C;
+        filter: drop-shadow(0 0 8px rgba(220, 20, 60, 0.6)) drop-shadow(0 0 20px rgba(220, 20, 60, 0.3));
+        transform: scale(1);
+      }
+      10% {
+        color: #FF1493;
+        filter: drop-shadow(0 0 12px rgba(255, 20, 147, 0.7)) drop-shadow(0 0 25px rgba(255, 20, 147, 0.4));
+        transform: scale(1.05);
+      }
+      20% {
+        color: #FF69B4;
+        filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6)) drop-shadow(0 0 22px rgba(255, 105, 180, 0.35));
+        transform: scale(1.02);
+      }
+      30% {
+        color: #DB7093;
+        filter: drop-shadow(0 0 8px rgba(219, 112, 147, 0.6)) drop-shadow(0 0 20px rgba(219, 112, 147, 0.3));
+        transform: scale(1);
+      }
+      40% {
+        color: #C71585;
+        filter: drop-shadow(0 0 12px rgba(199, 21, 133, 0.7)) drop-shadow(0 0 25px rgba(199, 21, 133, 0.4));
+        transform: scale(1.08);
+      }
+      50% {
+        color: #FF0066;
+        filter: drop-shadow(0 0 15px rgba(255, 0, 102, 0.8)) drop-shadow(0 0 30px rgba(255, 0, 102, 0.5));
+        transform: scale(1.1);
+      }
+      60% {
+        color: #E91E63;
+        filter: drop-shadow(0 0 12px rgba(233, 30, 99, 0.7)) drop-shadow(0 0 25px rgba(233, 30, 99, 0.4));
+        transform: scale(1.05);
+      }
+      70% {
+        color: #FF4081;
+        filter: drop-shadow(0 0 10px rgba(255, 64, 129, 0.65)) drop-shadow(0 0 22px rgba(255, 64, 129, 0.35));
+        transform: scale(1.02);
+      }
+      80% {
+        color: #B22222;
+        filter: drop-shadow(0 0 8px rgba(178, 34, 34, 0.6)) drop-shadow(0 0 20px rgba(178, 34, 34, 0.3));
+        transform: scale(1);
+      }
+      90% {
+        color: #8B0000;
+        filter: drop-shadow(0 0 10px rgba(139, 0, 0, 0.65)) drop-shadow(0 0 22px rgba(139, 0, 0, 0.35));
+        transform: scale(1.03);
+      }
+    }
+    .animate-heart {
+      animation: heartPulse 4s ease-in-out infinite;
+    }
   </style>
   </head>
 <body class="bg-background-dark font-sans text-white antialiased overflow-x-hidden selection:bg-gold selection:text-burgundy">
 <div class="mx-auto flex min-h-screen w-full lg:max-w-[1920px] flex-col relative bg-background-dark lg:shadow-2xl overflow-y-auto">
 <div class="relative min-h-[100vh] lg:min-h-screen flex flex-col justify-end lg:justify-center">
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105" data-alt="Macro shot of crystal-coated cannabis bud intertwined with a silk red rose" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6WehjDZISodJZoGyTK5rVj106g0uQpyhb3v2CO9HQswPpcBQJaPSzsBl4BzInI5e0AwmW9S4QWkd5JPYDohXZ-CMIyREGSG0u7_Cvegglrlwk_FijRO_9d1zYKBzgJScmPXLWRuTrh5mL1J4hmN2i3mGlly3dCRxa9M4riUVGVNGFjETw4ZENMJA1Ur5ErXPN1VfhrMvPcS597rrRtu-dBGHaT_itsuzk_cfmEEGzcsUNm4f45M46ZfxvTt0vQQ3hwz3v1z8JqyYb');">
+<!-- Mobile Hero Background -->
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 lg:hidden" data-alt="Valentine's Day Cannabis Specials" style="background-image: url('https://thecannabar.com/wp-content/uploads/2026/01/Main-Image-scaled.png');">
+</div>
+<!-- Desktop Hero Background -->
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 hidden lg:block" data-alt="Valentine's Day Cannabis Specials" style="background-image: url('https://thecannabar.com/wp-content/uploads/2026/01/Banner-scaled.png');">
 </div>
 <div class="absolute inset-0 bg-gradient-to-b from-[#1a0505]/40 via-transparent to-[#1a0505] z-10"></div>
 <div class="absolute inset-0 bg-burgundy/20 mix-blend-multiply z-10"></div>
@@ -58,21 +126,21 @@
 </div>
 <div class="relative z-20 px-6 lg:px-16 xl:px-24 pt-28 lg:pt-32 pb-10 lg:pb-20 flex flex-col items-center text-center max-w-[1920px] mx-auto">
 <div class="flex flex-col gap-4 lg:gap-5">
-<p class="text-xs lg:text-sm font-medium tracking-[0.25em] uppercase text-gold">The Canna Bar · NJ Cannabis Dispensary · Matawan</p>
+<p class="text-xs lg:text-sm font-medium tracking-[0.25em] uppercase text-gold [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">The Canna Bar · NJ Cannabis Dispensary · Matawan</p>
 <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1] text-white tracking-tight drop-shadow-lg">
 Valentine's Day<br/>
 <span class="text-gold">Save 25%</span>
 </h1>
-<p class="text-lg lg:text-xl xl:text-2xl text-white/70 font-light max-w-sm lg:max-w-xl">
-Build your bundle with <span class="text-white font-medium">4+ items</span> and get <span class="text-gold font-medium">25% off</span> your entire order.
+<p class="text-lg lg:text-xl xl:text-2xl text-white font-light max-w-sm lg:max-w-xl [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
+Build your bundle with <span class="text-white font-semibold">4+ items</span> and get <span class="text-gold font-semibold drop-shadow-lg">25% off</span> your entire order.
 </p>
-<p class="text-sm lg:text-base text-white/50 w-full text-center mx-auto">
-<span class="text-white/40 text-xs">Select from:</span> Flower · Pre-Rolls · Diamonds · Chocolate Edibles · Infused Spreads
+<p class="text-sm lg:text-base text-white font-medium w-full text-center mx-auto [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
+<span class="text-white/80 text-xs lg:text-sm">Select from:</span> Flower · Pre-Rolls · Diamonds · Chocolate Edibles · Infused Spreads
 </p>
 </div>
 <!-- Free Chocolate Promo -->
 <div class="mt-10 lg:mt-20 w-full max-w-sm lg:max-w-7xl">
-<p class="text-xs lg:text-sm uppercase tracking-[0.2em] text-white/50 text-center lg:hidden mb-4">Plus: Free Gift with Purchase</p>
+<p class="text-sm uppercase tracking-[0.2em] text-gold font-medium text-center lg:hidden mb-4 [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">Plus: Free Gift with Purchase</p>
 <!-- MOBILE LAYOUT -->
 <div class="flex flex-col items-center lg:hidden">
 <h3 class="font-serif text-3xl text-white leading-tight text-center mb-6">
@@ -80,7 +148,7 @@ Spend $100+<br/>
 <span class="text-gold">Free Chocolates</span>
 </h3>
 <div class="w-full max-w-[300px] aspect-square rounded-2xl overflow-hidden shadow-[0_25px_80px_-20px_rgba(0,0,0,0.8)] mb-6">
-<img src="https://thecannabar.com/wp-content/uploads/2026/01/JerseyCanna_Love-Romance-Sensuals.png" alt="Jersey Canna Love & Romance Chocolates" class="w-full h-full object-contain bg-white/5"/>
+<img src="https://thecannabar.com/wp-content/uploads/2026/01/product.png" alt="Jersey Canna Love & Romance Chocolates" class="w-full h-full object-contain bg-white/5"/>
 </div>
 <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
 <span class="text-xs uppercase tracking-wider text-gold px-3 py-1.5 rounded-full bg-gold/10 border border-gold/30">NECANN Cup Winner</span>
@@ -102,9 +170,9 @@ Belgian milk chocolates infused with Maca, Ginseng & L-Arginine. 10 pieces per b
 </div>
 <!-- DESKTOP LAYOUT -->
 <div class="hidden lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-16 xl:gap-24">
-<p class="absolute -top-12 left-0 right-0 text-sm uppercase tracking-[0.2em] text-white/50 text-center">Plus: Free Gift with Purchase</p>
+<p class="absolute -top-12 left-0 right-0 text-sm uppercase tracking-[0.2em] text-gold font-medium text-center [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">Plus: Free Gift with Purchase</p>
 <div class="w-full max-w-[450px] xl:max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-[0_25px_80px_-20px_rgba(0,0,0,0.8)]">
-<img src="https://thecannabar.com/wp-content/uploads/2026/01/JerseyCanna_Love-Romance-Sensuals.png" alt="Jersey Canna Love & Romance Chocolates" class="w-full h-full object-contain bg-white/5"/>
+<img src="https://thecannabar.com/wp-content/uploads/2026/01/product.png" alt="Jersey Canna Love & Romance Chocolates" class="w-full h-full object-contain bg-white/5"/>
 </div>
 <div class="flex flex-col text-left gap-5">
 <h3 class="font-serif text-6xl xl:text-7xl text-white leading-tight">
@@ -138,76 +206,136 @@ Belgian milk chocolates infused with Maca, Ginseng & L-Arginine. 10 pieces per b
 </div>
 </div>
 <div class="relative z-20 bg-background-dark pb-20 px-6 lg:px-16 xl:px-24">
-<div class="sticky top-0 z-30 bg-background-dark/95 backdrop-blur-md py-4 lg:py-6 border-b border-white/5 mb-8 lg:mb-12">
-<div class="flex flex-col gap-4 lg:gap-5 max-w-[1920px] mx-auto">
-<div class="flex justify-between items-end">
-<h3 class="font-serif text-2xl lg:text-3xl xl:text-4xl text-white">Curated Selection</h3>
-<span class="text-xs lg:text-sm text-gold font-sans uppercase tracking-widest">0/4 Selected</span>
+<!-- Section Header -->
+<div class="text-center mb-10 lg:mb-16 max-w-[1920px] mx-auto pt-4">
+<p class="text-xs lg:text-sm uppercase tracking-[0.3em] text-gold/80 mb-3">Build Your Bundle</p>
+<h3 class="font-serif text-3xl lg:text-5xl xl:text-6xl text-white mb-4">Pick 4+ Items</h3>
+<p class="text-base lg:text-lg text-white/60 max-w-lg mx-auto">Mix & match from our curated Valentine's collection and save 25%</p>
 </div>
-<nav class="flex flex-wrap gap-2 lg:gap-3">
-<a href="#flower" class="px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs uppercase tracking-wider bg-white/10 text-white/80 hover:bg-white/20 transition-colors">Flower</a>
-<a href="#prerolls" class="px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs uppercase tracking-wider bg-white/10 text-white/80 hover:bg-white/20 transition-colors">Pre-Rolls</a>
-<a href="#diamonds" class="px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs uppercase tracking-wider bg-white/10 text-white/80 hover:bg-white/20 transition-colors">Diamonds</a>
-<a href="#chocolates" class="px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs uppercase tracking-wider bg-white/10 text-white/80 hover:bg-white/20 transition-colors">Chocolate Edibles</a>
-<a href="#spreads" class="px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs uppercase tracking-wider bg-white/10 text-white/80 hover:bg-white/20 transition-colors">Infused Spreads</a>
-<a href="#baked" class="px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs uppercase tracking-wider bg-white/10 text-white/80 hover:bg-white/20 transition-colors">Baked Goods</a>
-</nav>
+
+<!-- Liquid Glass Product Cards -->
+<div class="relative max-w-[1920px] mx-auto">
+<!-- Swipe hint for mobile -->
+<div class="flex items-center justify-center gap-2 mb-4 lg:hidden">
+<span class="text-xs text-white/40 uppercase tracking-widest">Swipe to explore</span>
+<span class="material-symbols-outlined text-gold/60 text-sm animate-pulse">swipe_left</span>
 </div>
-</div>
-<!-- Category Cards Grid -->
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 max-w-[1920px] mx-auto">
+<!-- Scrollable row on mobile, grid on desktop -->
+<div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide lg:grid lg:grid-cols-5 lg:gap-6 lg:overflow-visible lg:pb-0 -mx-6 px-6 lg:mx-0 lg:px-0">
 <!-- Flower -->
-<a href="https://thecannabar.com/shop/flower/?dtche[category]=flower" class="group flex flex-col overflow-hidden rounded-xl lg:rounded-2xl transition-all duration-300 hover:scale-[1.02]">
-<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/95">
-<img src="https://images.dutchie.com/e3da55751a09dc727f61c687711eb5e5?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Flower" class="w-full h-full object-contain"/>
+<div class="group relative flex-shrink-0 w-[160px] snap-center lg:w-auto">
+<div class="relative overflow-hidden rounded-2xl lg:rounded-3xl bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-500 hover:shadow-[0_16px_48px_rgba(212,175,55,0.15),inset_0_1px_0_rgba(255,255,255,0.3)] hover:border-gold/30 hover:scale-[1.03]">
+<div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-burgundy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="p-3 lg:p-4">
+<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/90 mb-3 lg:mb-4 shadow-inner">
+<img src="https://images.dutchie.com/e3da55751a09dc727f61c687711eb5e5?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Flower" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"/>
 </div>
-<div class="pt-3 text-center">
-<h4 class="font-serif text-base lg:text-lg text-white font-medium">Flower</h4>
+<div class="text-center relative z-10">
+<h4 class="font-serif text-lg lg:text-xl text-white font-medium mb-1">Flower</h4>
+<p class="text-xs lg:text-sm text-white/50">Premium Strains</p>
 </div>
-</a>
+</div>
+</div>
+</div>
+
 <!-- Pre-Rolls -->
-<a href="https://thecannabar.com/shop/pre-rolls/?dtche[category]=pre-rolls" class="group flex flex-col overflow-hidden rounded-xl lg:rounded-2xl transition-all duration-300 hover:scale-[1.02]">
-<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/95">
-<img src="https://images.dutchie.com/cd9934ddf6864e442f0bf096656cd94e?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Pre-Rolls" class="w-full h-full object-contain"/>
+<div class="group relative flex-shrink-0 w-[160px] snap-center lg:w-auto">
+<div class="relative overflow-hidden rounded-2xl lg:rounded-3xl bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-500 hover:shadow-[0_16px_48px_rgba(212,175,55,0.15),inset_0_1px_0_rgba(255,255,255,0.3)] hover:border-gold/30 hover:scale-[1.03]">
+<div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-burgundy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="p-3 lg:p-4">
+<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/90 mb-3 lg:mb-4 shadow-inner">
+<img src="https://images.dutchie.com/cd9934ddf6864e442f0bf096656cd94e?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Pre-Rolls" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"/>
 </div>
-<div class="pt-3 text-center">
-<h4 class="font-serif text-base lg:text-lg text-white font-medium">Pre-Rolls</h4>
+<div class="text-center relative z-10">
+<h4 class="font-serif text-lg lg:text-xl text-white font-medium mb-1">Pre-Rolls</h4>
+<p class="text-xs lg:text-sm text-white/50">Ready to Enjoy</p>
 </div>
-</a>
+</div>
+</div>
+</div>
+
 <!-- Diamonds -->
-<a href="https://thecannabar.com/shop/concentrates/?dtche[path]=products/concentrates/diamonds" class="group flex flex-col overflow-hidden rounded-xl lg:rounded-2xl transition-all duration-300 hover:scale-[1.02]">
-<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/95">
-<img src="https://images.dutchie.com/b83417d18851fc70c9f53198767f27df?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Diamonds" class="w-full h-full object-contain"/>
+<div class="group relative flex-shrink-0 w-[160px] snap-center lg:w-auto">
+<div class="relative overflow-hidden rounded-2xl lg:rounded-3xl bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-500 hover:shadow-[0_16px_48px_rgba(212,175,55,0.15),inset_0_1px_0_rgba(255,255,255,0.3)] hover:border-gold/30 hover:scale-[1.03]">
+<div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-burgundy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="p-3 lg:p-4">
+<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/90 mb-3 lg:mb-4 shadow-inner">
+<img src="https://images.dutchie.com/b83417d18851fc70c9f53198767f27df?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Diamonds" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"/>
 </div>
-<div class="pt-3 text-center">
-<h4 class="font-serif text-base lg:text-lg text-white font-medium">Diamonds</h4>
+<div class="text-center relative z-10">
+<h4 class="font-serif text-lg lg:text-xl text-white font-medium mb-1">Diamonds</h4>
+<p class="text-xs lg:text-sm text-white/50">Pure Potency</p>
 </div>
-</a>
+</div>
+</div>
+</div>
+
 <!-- Chocolates -->
-<a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=chocolate" class="group flex flex-col overflow-hidden rounded-xl lg:rounded-2xl transition-all duration-300 hover:scale-[1.02]">
-<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/95">
-<img src="https://images.dutchie.com/f98a88be8bfc725a9a7d69f7818f0ab0?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Chocolate Edibles" class="w-full h-full object-contain"/>
+<div class="group relative flex-shrink-0 w-[160px] snap-center lg:w-auto">
+<div class="relative overflow-hidden rounded-2xl lg:rounded-3xl bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-500 hover:shadow-[0_16px_48px_rgba(212,175,55,0.15),inset_0_1px_0_rgba(255,255,255,0.3)] hover:border-gold/30 hover:scale-[1.03]">
+<div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-burgundy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="p-3 lg:p-4">
+<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/90 mb-3 lg:mb-4 shadow-inner">
+<img src="https://images.dutchie.com/f98a88be8bfc725a9a7d69f7818f0ab0?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Chocolate Edibles" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"/>
 </div>
-<div class="pt-3 text-center">
-<h4 class="font-serif text-base lg:text-lg text-white font-medium">Chocolate Edibles</h4>
-<p class="text-xs lg:text-sm text-white/50 mt-1">Incredibles · Cheeba Chews · Jersey Canna · Chocolit</p>
+<div class="text-center relative z-10">
+<h4 class="font-serif text-lg lg:text-xl text-white font-medium mb-1">Chocolates</h4>
+<p class="text-xs lg:text-sm text-white/50">Sweet Indulgence</p>
 </div>
-</a>
+</div>
+</div>
+</div>
+
 <!-- Spreads -->
-<a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=spread" class="group flex flex-col overflow-hidden rounded-xl lg:rounded-2xl transition-all duration-300 hover:scale-[1.02]">
-<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/95">
-<img src="https://images.dutchie.com/d406e7fca795898b94c84d5e5097b9a0?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Infused Spreads" class="w-full h-full object-contain"/>
+<div class="group relative flex-shrink-0 w-[160px] snap-center lg:w-auto">
+<div class="relative overflow-hidden rounded-2xl lg:rounded-3xl bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-500 hover:shadow-[0_16px_48px_rgba(212,175,55,0.15),inset_0_1px_0_rgba(255,255,255,0.3)] hover:border-gold/30 hover:scale-[1.03]">
+<div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-burgundy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="p-3 lg:p-4">
+<div class="aspect-square overflow-hidden rounded-xl lg:rounded-2xl bg-white/90 mb-3 lg:mb-4 shadow-inner">
+<img src="https://images.dutchie.com/d406e7fca795898b94c84d5e5097b9a0?auto=format%2Ccompress&cs=srgb&fit=fill&fill=solid&fillColor=%23fff&w=717.5&dpr=1&ixlib=react-9.8.1" alt="Cannabis Infused Spreads" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"/>
 </div>
-<div class="pt-3 text-center">
-<h4 class="font-serif text-base lg:text-lg text-white font-medium">Infused Spreads</h4>
-<p class="text-xs lg:text-sm text-white/50 mt-1">Peanut Butter · Almond · Hazelnut · Pistachio</p>
+<div class="text-center relative z-10">
+<h4 class="font-serif text-lg lg:text-xl text-white font-medium mb-1">Spreads</h4>
+<p class="text-xs lg:text-sm text-white/50">Infused Delights</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Valentine's Shop Now CTA -->
+<div class="mt-12 lg:mt-16 flex flex-col items-center gap-6 max-w-[1920px] mx-auto">
+<a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=collections%2Fvalentine-s-day-collection&dtche%5Bpage%5D=3" class="group relative inline-flex items-center justify-center gap-4 px-10 lg:px-16 py-5 lg:py-6 overflow-hidden transition-all duration-700 ease-out hover:scale-[1.02]">
+<!-- Outer Glow -->
+<div class="absolute -inset-1 bg-gradient-to-r from-gold/60 via-[#FFD700]/80 to-gold/60 rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition-opacity duration-700 animate-pulse"></div>
+<!-- Main Button Container -->
+<div class="absolute inset-0 bg-gradient-to-br from-[#1a0a0a] via-[#2d0a0a] to-[#1a0505] rounded-xl border border-gold/40 group-hover:border-gold/70 transition-all duration-500"></div>
+<!-- Inner Gold Frame -->
+<div class="absolute inset-[3px] rounded-[10px] border border-gold/20 group-hover:border-gold/40 transition-colors duration-500"></div>
+<!-- Glass Reflection Top -->
+<div class="absolute inset-x-[3px] top-[3px] h-1/2 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-t-[10px]"></div>
+<!-- Diagonal Shimmer -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+<!-- Corner Accents -->
+<div class="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-gold/50 rounded-tl-md group-hover:border-gold transition-colors duration-500"></div>
+<div class="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-gold/50 rounded-tr-md group-hover:border-gold transition-colors duration-500"></div>
+<div class="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-gold/50 rounded-bl-md group-hover:border-gold transition-colors duration-500"></div>
+<div class="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-gold/50 rounded-br-md group-hover:border-gold transition-colors duration-500"></div>
+<!-- Content -->
+<span class="relative z-10 text-3xl lg:text-4xl animate-heart">&#10084;</span>
+<span class="relative z-10 font-serif text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold to-gold-light font-medium tracking-wider uppercase">Shop the Collection</span>
+<span class="relative z-10 material-symbols-outlined text-gold text-xl lg:text-2xl group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span>
 </a>
-</div>
-<!-- Bundle Fine Print -->
-<div class="mt-8 lg:mt-12 max-w-3xl mx-auto text-center">
-<p class="text-xs lg:text-sm text-white/50 leading-relaxed">
-<span class="text-gold">*Bundle Deal:</span> Purchase 4 or more items from the categories above and spend $100+ to receive <span class="text-white/70">25% off your entire order</span> plus <span class="text-white/70">FREE Jersey Canna Chocolates</span>. In-store only. Cannot be combined with other offers.
+
+<!-- Fine Print -->
+<p class="text-xs lg:text-sm text-white/40 text-center max-w-xl leading-relaxed">
+<span class="text-gold/70">*Bundle Deal:</span> Purchase 4+ items & spend $100+ for <span class="text-white/60">25% off</span> + <span class="text-white/60">FREE Chocolates</span>. In-store only.
 </p>
 </div>
 <!-- Location & Footer -->
