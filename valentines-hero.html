@@ -126,22 +126,47 @@
 <div class="absolute inset-0 bg-burgundy/20 mix-blend-multiply z-10"></div>
 <div class="absolute bottom-0 left-0 right-0 h-4/5 bg-gradient-to-t from-[#1a0505] via-[#1a0505]/80 to-transparent z-10"></div>
 </div>
-<div class="relative z-20 px-6 lg:px-16 xl:px-24 pt-28 lg:pt-32 pb-10 lg:pb-20 flex flex-col items-center text-center max-w-[1920px] mx-auto">
-<div class="flex flex-col gap-6 lg:gap-8">
-<h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1.1] text-white tracking-tight drop-shadow-lg [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
+<div class="relative z-20 px-6 lg:px-16 xl:px-24 pt-16 lg:pt-24 pb-8 lg:pb-16 flex flex-col max-w-[1920px] mx-auto">
+<!-- MOBILE LAYOUT -->
+<div class="flex flex-col items-center text-center lg:hidden">
+<h1 class="font-serif text-5xl sm:text-6xl font-medium leading-[1.05] text-white tracking-tight drop-shadow-lg [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)] mb-8">
 Valentine's Day at<br/>
 <span class="text-vred-light [text-shadow:_0_0_20px_rgba(232,65,66,0.6),_0_2px_4px_rgba(0,0,0,0.9)]">The Canna Bar</span>
 </h1>
-<!-- THE BUNDLE DEAL -->
-<div class="flex flex-col gap-2 max-w-xl">
-<p class="text-base lg:text-lg font-semibold tracking-[0.2em] uppercase text-white [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">The Bundle Deal</p>
-<h2 class="font-serif text-5xl lg:text-6xl xl:text-7xl text-vred-light font-medium [text-shadow:_0_0_25px_rgba(232,65,66,0.7),_0_2px_4px_rgba(0,0,0,0.9)]">SAVE 25%</h2>
-<p class="text-xl lg:text-2xl xl:text-3xl text-white font-light leading-relaxed [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
+<!-- Bundle Deal Card -->
+<div class="w-full max-w-md bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 p-6 flex flex-col items-center gap-4">
+<p class="text-sm font-semibold tracking-[0.25em] uppercase text-white/80">The Bundle Deal</p>
+<h2 class="font-serif text-6xl text-vred-light font-medium [text-shadow:_0_0_25px_rgba(232,65,66,0.7),_0_2px_4px_rgba(0,0,0,0.9)]">SAVE 25%</h2>
+<p class="text-lg text-white font-light leading-relaxed [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
 Build a bundle of <span class="text-white font-semibold">4 or more items</span> and take <span class="text-vred-light font-semibold">25% off</span> your entire order.
 </p>
-<p class="text-lg lg:text-xl text-white font-medium [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
+<div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-2"></div>
+<p class="text-base text-white/90 font-medium [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
 Choose from: Flower · Pre-Rolls · Diamonds · Chocolate Edibles · Infused Spreads
 </p>
+</div>
+</div>
+<!-- DESKTOP LAYOUT -->
+<div class="hidden lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-16 xl:gap-24 w-full">
+<!-- Left: Main Headline -->
+<div class="flex-1 text-left">
+<h1 class="font-serif text-7xl xl:text-8xl font-medium leading-[1.05] text-white tracking-tight drop-shadow-lg [text-shadow:_0_2px_10px_rgba(0,0,0,0.9),_0_4px_20px_rgba(0,0,0,0.8)]">
+Valentine's Day at<br/>
+<span class="text-vred-light [text-shadow:_0_0_20px_rgba(232,65,66,0.6),_0_2px_4px_rgba(0,0,0,0.9)]">The Canna Bar</span>
+</h1>
+</div>
+<!-- Right: Bundle Deal Card -->
+<div class="flex-shrink-0 w-full max-w-lg bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 p-8 xl:p-10 flex flex-col gap-5">
+<p class="text-base font-semibold tracking-[0.25em] uppercase text-white/80">The Bundle Deal</p>
+<h2 class="font-serif text-6xl xl:text-7xl text-vred-light font-medium [text-shadow:_0_0_25px_rgba(232,65,66,0.7),_0_2px_4px_rgba(0,0,0,0.9)]">SAVE 25%</h2>
+<p class="text-xl xl:text-2xl text-white font-light leading-relaxed [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
+Build a bundle of <span class="text-white font-semibold">4 or more items</span> and take <span class="text-vred-light font-semibold">25% off</span> your entire order.
+</p>
+<div class="w-full h-px bg-gradient-to-r from-white/20 via-white/10 to-transparent my-1"></div>
+<p class="text-lg xl:text-xl text-white/90 font-medium [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
+Choose from: Flower · Pre-Rolls · Diamonds · Chocolate Edibles · Infused Spreads
+</p>
+</div>
 </div>
 </div>
 <!-- Free Chocolate Promo -->
