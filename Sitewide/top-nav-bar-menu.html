@@ -1,0 +1,3549 @@
+<!-- Custom Navigation Widget for Elementor - Fixed Version -->
+<!-- Page Transition Loading Overlay - Hidden by default with inline styles to prevent FOUC -->
+<div id="tcb-page-transition-overlay" class="tcb-page-transition"
+  style="opacity:0;visibility:hidden;pointer-events:none;">
+  <div class="tcb-transition-content">
+    <img src="https://thecannabar.com/wp-content/uploads/2025/08/logo.png" alt="The Canna Bar"
+      class="tcb-transition-logo">
+    <div class="tcb-transition-spinner"></div>
+    <span class="tcb-transition-text">Loading...</span>
+  </div>
+</div>
+<div id="tcb-nav-widget-wrapper" class="tcb-custom-nav-widget">
+  <header class="tcb-nav-header">
+    <!-- Contact Info Bar -->
+    <div class="tcb-contact-bar">
+      <div class="tcb-contact-container">
+        <a href="tel:7326298278" class="tcb-contact-link tcb-phone-link" aria-label="Call (732) 629-8278">
+          <i class="fas fa-phone-alt tcb-contact-icon" style="margin-right:0;"></i>
+        </a>
+        <a href="sms:7326298278" class="tcb-contact-link tcb-text-link" aria-label="Text (732) 629-8278">
+          <i class="fas fa-sms tcb-contact-icon tcb-text-icon" style="margin-right:0;"></i>
+        </a>
+        <a href="mailto:david@thecannabar.com" class="tcb-contact-link tcb-email-link"
+          aria-label="Email david@thecannabar.com">
+          <i class="fas fa-envelope tcb-contact-icon" style="margin-right:0;"></i>
+        </a>
+        <a href="https://www.instagram.com/thecannabar_nj/" target="_blank" rel="noopener noreferrer"
+          class="tcb-contact-link tcb-instagram-link" aria-label="Follow us on Instagram">
+          <svg class="tcb-contact-icon" style="width: 28px; height: 28px; vertical-align: middle; fill: currentColor;"
+            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg>
+        </a>
+        <a href="https://business.dutchie.com/pay-by-bank/consumer" target="_blank"
+          class="tcb-contact-link tcb-bank-link">
+          <i class="fas fa-university tcb-contact-icon"></i>
+          <span class="tcb-contact-text">
+            <span class="tcb-contact-value">Pay by Bank</span>
+          </span>
+        </a>
+        <a href="https://www.google.com/maps?sca_esv=ff3a164b2762a5c0&sxsrf=AE3TifNH6dh_GZDRgclO9ZCDvTmxk2f4Sg:1760117980713&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E3KXvnuHpXMBXbEASfPebTrxUUnXeBPMYUkDPDsnhAlo9Y1BXrtahU8NeBPd-fIKY4wTKIHD3LeJ8505lDWGwQGX8Te4NlrmqMHZL6iSsvBxHm5gmg%3D%3D&biw=1578&bih=1282&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KdkEvcmHzcOJMf9XApat72i1&daddr=58+Main+St,+Matawan,+NJ+07747"
+          target="_blank" rel="noopener noreferrer" class="tcb-directions-btn">
+          <i class="fas fa-map-marker-alt tcb-directions-icon"></i>
+          <span class="tcb-directions-text">Directions</span>
+        </a>
+      </div>
+    </div>
+    <nav class="tcb-main-nav" id="tcbMainNav">
+      <div class="tcb-nav-container">
+        <a href="/" class="tcb-nav-logo" aria-label="Go to Homepage">
+          <img src="https://thecannabar.com/wp-content/uploads/2025/08/logo.png" alt="The Canna Bar Logo"
+            class="tcb-logo-img" />
+        </a>
+
+        <!-- Mobile Search Row - Always Visible on Mobile -->
+        <div class="tcb-mobile-search-row">
+          <form class="tcb-search-form tcb-mobile-header-search-form" id="tcbMobileHeaderSearchForm" role="search"
+            aria-label="Search products">
+            <div class="tcb-search-wrapper">
+              <input type="search" class="tcb-search-input" id="tcbMobileHeaderSearchInput"
+                placeholder="What are you looking for today?" aria-label="Search products" autocomplete="off"
+                aria-autocomplete="list" aria-controls="tcbMobileAutocompleteList" />
+              <button type="submit" class="tcb-search-btn" aria-label="Submit search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="tcb-search-icon-svg">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="tcb-autocomplete-dropdown" id="tcbMobileAutocompleteList" role="listbox" aria-hidden="true">
+            </div>
+          </form>
+        </div>
+
+        <ul class="tcb-nav-menu-desktop">
+          <li class="tcb-nav-item tcb-mega-trigger" id="tcbMegaTrigger">
+            <a href="https://thecannabar.com/shop/" class="tcb-nav-link tcb-dropdown-toggle" aria-haspopup="true"
+              aria-expanded="false">
+              Shop <span class="tcb-chevron-down">▼</span>
+            </a>
+            <!-- Full-Width Mega Menu Panel -->
+            <div class="tcb-mega-panel" id="tcbMegaPanel" role="menu" aria-hidden="true">
+              <div class="tcb-mega-inner">
+                <!-- Quick Access Row -->
+                <div class="tcb-mega-quick-row">
+                  <a href="https://thecannabar.com/shop/" class="tcb-mega-quick-link tcb-mega-shop-all">
+                    <span class="tcb-mega-quick-icon">🛒</span>
+                    <span class="tcb-mega-quick-text">Shop All Products</span>
+                  </a>
+                  <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials"
+                    class="tcb-mega-quick-link tcb-mega-specials-link">
+                    <span class="tcb-mega-quick-icon">🔥</span>
+                    <span class="tcb-mega-quick-text">Today's Specials</span>
+                  </a>
+                  <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=brands" class="tcb-mega-quick-link">
+                    <span class="tcb-mega-quick-icon">🏷️</span>
+                    <span class="tcb-mega-quick-text">Browse Brands</span>
+                  </a>
+                </div>
+                <!-- Organized Category Grid -->
+                <div class="tcb-mega-grid">
+                  <!-- Column 1: Flower & Smokables -->
+                  <div class="tcb-mega-col">
+                    <h4 class="tcb-mega-heading">Flower & Smokables</h4>
+                    <a href="https://thecannabar.com/shop/flower/" class="tcb-mega-link tcb-mega-featured">
+                      <span class="tcb-mega-link-icon">🌸</span> Flower
+                    </a>
+                    <a href="https://thecannabar.com/shop/pre-rolls/" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🌱</span> Pre-Rolls
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=infused"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🔥</span> Infused
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=popcorn"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🍿</span> Popcorn
+                    </a>
+                  </div>
+                  <!-- Column 2: Vapes & Concentrates -->
+                  <div class="tcb-mega-col">
+                    <h4 class="tcb-mega-heading">Vapes & Concentrates</h4>
+                    <a href="https://thecannabar.com/shop/vaporizers/" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">💨</span> Vaporizers
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=AIO"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🖊️</span> AIO (All-in-One)
+                    </a>
+                    <a href="https://thecannabar.com/shop/concentrates/" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">💎</span> Concentrates
+                    </a>
+                  </div>
+                  <!-- Column 3: Edibles & Drinks -->
+                  <div class="tcb-mega-col">
+                    <h4 class="tcb-mega-heading">Edibles & Drinks</h4>
+                    <a href="https://thecannabar.com/shop/edibles/" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🍯</span> Edibles
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=Drink"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🥤</span> Drinks
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bcategory%5D=tinctures" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🧪</span> Tinctures
+                    </a>
+                  </div>
+                  <!-- Column 4: Wellness & More -->
+                  <div class="tcb-mega-col">
+                    <h4 class="tcb-mega-heading">Wellness & More</h4>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bcategory%5D=topicals" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🧴</span> Topicals
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=CBN"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🌙</span> CBN
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=THCV"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">☀️</span> THCV
+                    </a>
+                    <a href="https://thecannabar.com/shop/accessories/" class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">🛠️</span> Accessories
+                    </a>
+                    <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=collections%2Fmerchandise"
+                      class="tcb-mega-link">
+                      <span class="tcb-mega-link-icon">👕</span> Merchandise
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="tcb-nav-item"><a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=brands"
+              class="tcb-nav-link">Brands</a></li>
+          <li class="tcb-nav-item"><a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials"
+              class="tcb-nav-link"><i class="fas fa-fire tcb-bounce-icon"></i> Specials</a></li>
+          <li class="tcb-nav-item"><a href="https://thecannabar.com/discounts/" class="tcb-nav-link">Discounts</a>
+          </li>
+          <li class="tcb-nav-item"><a href="https://thecannabar.com/events/" class="tcb-nav-link">Events</a></li>
+          <li class="tcb-nav-item"><a href="https://thecannabar.com/gallery/" class="tcb-nav-link">Gallery</a></li>
+          <li class="tcb-nav-item"><a href="https://thecannabar.com/loyalty/" class="tcb-nav-link">Loyalty</a></li>
+        </ul>
+        <div class="tcb-nav-actions">
+          <form class="tcb-search-form" id="tcbSearchForm" role="search" aria-label="Search products">
+            <div class="tcb-search-wrapper">
+              <input type="search" class="tcb-search-input" id="tcbSearchInput"
+                placeholder="What are you looking for today?" aria-label="Search products" autocomplete="off"
+                aria-autocomplete="list" aria-controls="tcbAutocompleteList" />
+              <button type="submit" class="tcb-search-btn" aria-label="Submit search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="tcb-search-icon-svg">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="tcb-autocomplete-dropdown" id="tcbAutocompleteList" role="listbox" aria-hidden="true"></div>
+          </form>
+        </div>
+        <div class="tcb-mobile-nav-actions">
+          <button class="tcb-hamburger" id="tcbHamburger" aria-label="Open Menu" aria-controls="tcbNavMenuMobile"
+            aria-expanded="false" type="button">
+            <span class="tcb-burger-line"></span>
+            <span class="tcb-burger-line"></span>
+            <span class="tcb-burger-line"></span>
+          </button>
+        </div>
+
+
+      </div>
+    </nav>
+  </header>
+
+
+  <aside class="tcb-nav-menu-mobile" id="tcbNavMenuMobile" aria-hidden="true">
+    <!-- Mobile Menu Header -->
+    <div class="tcb-mobile-menu-header">
+      <img src="https://thecannabar.com/wp-content/uploads/2025/08/logo.png" alt="Canna Bar"
+        class="tcb-mobile-logo-img" />
+      <button class="tcb-mobile-close-btn" id="tcbMobileCloseBtn" aria-label="Close Menu" type="button">
+        <span class="tcb-icon-close">×</span>
+      </button>
+    </div>
+
+
+    <div class="tcb-mobile-menu-body">
+      <!-- Mobile Search Form -->
+      <div class="tcb-mobile-search-container">
+        <form class="tcb-search-form tcb-mobile-search-form" id="tcbMobileSearchForm" role="search"
+          aria-label="Search products">
+          <div class="tcb-search-wrapper">
+            <input type="search" class="tcb-search-input" id="tcbMobileSearchInput"
+              placeholder="What are you looking for today?" aria-label="Search products" autocomplete="off"
+              aria-autocomplete="list" aria-controls="tcbMobileMenuAutocompleteList" />
+            <button type="submit" class="tcb-search-btn" aria-label="Submit search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="tcb-search-icon-svg">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="tcb-autocomplete-dropdown" id="tcbMobileMenuAutocompleteList" role="listbox" aria-hidden="true">
+          </div>
+        </form>
+      </div>
+
+      <!-- Mobile Navigation - Organized by Category -->
+      <nav class="tcb-mobile-nav-list">
+        <!-- Quick Actions Grid - 2x2 Cards -->
+        <div class="tcb-quick-grid">
+          <a href="https://thecannabar.com/shop/" class="tcb-quick-card">
+            <span class="tcb-quick-card-icon">🛒</span>
+            <span class="tcb-quick-card-label">Shop All</span>
+          </a>
+          <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" class="tcb-quick-card tcb-quick-specials">
+            <span class="tcb-quick-card-icon">🔥</span>
+            <span class="tcb-quick-card-label">Specials</span>
+          </a>
+          <a href="https://thecannabar.com/loyalty/" class="tcb-quick-card">
+            <span class="tcb-quick-card-icon">⭐</span>
+            <span class="tcb-quick-card-label">Rewards</span>
+          </a>
+          <a href="https://thecannabar.com/discounts/" class="tcb-quick-card">
+            <span class="tcb-quick-card-icon">💰</span>
+            <span class="tcb-quick-card-label">Discounts</span>
+          </a>
+        </div>
+
+        <!-- Category Accordion -->
+        <div class="tcb-accordion-group">
+          <h3 class="tcb-section-heading">Shop by Category</h3>
+
+          <!-- Flower & Smokables -->
+          <div class="tcb-accordion-item">
+            <button class="tcb-accordion-trigger" type="button" aria-expanded="false">
+              <span class="tcb-accordion-trigger-icon">🌿</span>
+              <span class="tcb-accordion-trigger-text">Flower & Smokables</span>
+              <span class="tcb-accordion-chevron">›</span>
+            </button>
+            <div class="tcb-accordion-content" aria-hidden="true">
+              <a href="https://thecannabar.com/shop/flower/" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🌸</span> Flower
+              </a>
+              <a href="https://thecannabar.com/shop/pre-rolls/" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🌱</span> Pre-Rolls
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=infused"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🔥</span> Infused
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=popcorn"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🍿</span> Popcorn
+              </a>
+            </div>
+          </div>
+
+          <!-- Vapes & Concentrates -->
+          <div class="tcb-accordion-item">
+            <button class="tcb-accordion-trigger" type="button" aria-expanded="false">
+              <span class="tcb-accordion-trigger-icon">💨</span>
+              <span class="tcb-accordion-trigger-text">Vapes & Concentrates</span>
+              <span class="tcb-accordion-chevron">›</span>
+            </button>
+            <div class="tcb-accordion-content" aria-hidden="true">
+              <a href="https://thecannabar.com/shop/vaporizers/" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">💨</span> Vaporizers
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=AIO"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🖊️</span> AIO (All-in-One)
+              </a>
+              <a href="https://thecannabar.com/shop/concentrates/" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">💎</span> Concentrates
+              </a>
+            </div>
+          </div>
+
+          <!-- Edibles & Drinks -->
+          <div class="tcb-accordion-item">
+            <button class="tcb-accordion-trigger" type="button" aria-expanded="false">
+              <span class="tcb-accordion-trigger-icon">🍯</span>
+              <span class="tcb-accordion-trigger-text">Edibles & Drinks</span>
+              <span class="tcb-accordion-chevron">›</span>
+            </button>
+            <div class="tcb-accordion-content" aria-hidden="true">
+              <a href="https://thecannabar.com/shop/edibles/" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🍯</span> Edibles
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=Drink"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🥤</span> Drinks
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bcategory%5D=tinctures" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🧪</span> Tinctures
+              </a>
+            </div>
+          </div>
+
+          <!-- Wellness & More -->
+          <div class="tcb-accordion-item">
+            <button class="tcb-accordion-trigger" type="button" aria-expanded="false">
+              <span class="tcb-accordion-trigger-icon">🧴</span>
+              <span class="tcb-accordion-trigger-text">Wellness & More</span>
+              <span class="tcb-accordion-chevron">›</span>
+            </button>
+            <div class="tcb-accordion-content" aria-hidden="true">
+              <a href="https://thecannabar.com/shop/?dtche%5Bcategory%5D=topicals" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🧴</span> Topicals
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=CBN"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🌙</span> CBN
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=THCV"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">☀️</span> THCV
+              </a>
+              <a href="https://thecannabar.com/shop/accessories/" class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">🛠️</span> Accessories
+              </a>
+              <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=collections%2Fmerchandise"
+                class="tcb-accordion-link">
+                <span class="tcb-accordion-link-icon">👕</span> Merchandise
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explore Section -->
+        <div class="tcb-nav-section">
+          <h3 class="tcb-section-heading">Explore</h3>
+          <div class="tcb-nav-rows">
+            <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=brands" class="tcb-nav-row">
+              <span class="tcb-row-icon">🏷️</span>
+              <span class="tcb-row-text">Brands</span>
+            </a>
+            <a href="https://thecannabar.com/gallery/" class="tcb-nav-row">
+              <span class="tcb-row-icon">📸</span>
+              <span class="tcb-row-text">Gallery</span>
+            </a>
+            <a href="https://thecannabar.com/events/" class="tcb-nav-row">
+              <span class="tcb-row-icon">🎉</span>
+              <span class="tcb-row-text">Events</span>
+            </a>
+            <a href="https://thecannabar.com/about-us/" class="tcb-nav-row">
+              <span class="tcb-row-icon">ℹ️</span>
+              <span class="tcb-row-text">About Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="tcb-nav-section">
+          <h3 class="tcb-section-heading">Services</h3>
+          <div class="tcb-nav-rows">
+            <a href="https://business.dutchie.com/pay-by-bank/consumer" target="_blank" rel="noopener"
+              class="tcb-nav-row">
+              <span class="tcb-row-icon">🏦</span>
+              <span class="tcb-row-text">Pay by Bank</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="tcb-mobile-menu-footer">
+      <a href="https://thecannabar.com/shop/" class="tcb-footer-cta">
+        <span class="tcb-cart-icon">🛒</span> Order Online Now
+      </a>
+      <div class="tcb-footer-button-group">
+        <a href="tel:7326298278" class="tcb-footer-button">
+          <span class="tcb-phone-icon">📞</span> Call Us
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=58+Main+St,+Matawan,+NJ+07747" target="_blank"
+          rel="noopener" class="tcb-footer-button">
+          <span class="tcb-map-icon">📍</span> View Map
+        </a>
+      </div>
+      <div class="tcb-footer-address">
+        <span class="tcb-location-icon">📍</span> 58 Main St, Matawan, NJ 07747
+      </div>
+      <div class="tcb-footer-license">
+        <span class="tcb-cert-icon">📋</span> Licensed Dispensary • LIC# RE000965
+      </div>
+    </div>
+  </aside>
+  <div class="tcb-nav-overlay" id="tcbNavOverlay"></div>
+</div>
+
+<!-- Dropdown Portal removed - replaced by mega menu panel -->
+
+<!-- Font Awesome for Cannabis Leaf Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  /*
+=============================================
+THE CANNA BAR CUSTOM NAVIGATION FOR ELEMENTOR
+ZERO CONFLICT VERSION - All styles heavily scoped
+=============================================
+*/
+
+  /* Page Transition Overlay - Smooth loading screen */
+  #tcb-page-transition-overlay.tcb-page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #111111 0%, #1a1a1a 50%, #111111 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    pointer-events: none;
+  }
+
+  #tcb-page-transition-overlay.tcb-page-transition.tcb-transition-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+  }
+
+  #tcb-page-transition-overlay .tcb-transition-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    animation: tcb-fade-in 0.3s ease-out;
+  }
+
+  @keyframes tcb-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  #tcb-page-transition-overlay .tcb-transition-logo {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(76, 175, 80, 0.3));
+  }
+
+  #tcb-page-transition-overlay .tcb-transition-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(76, 175, 80, 0.2);
+    border-top-color: #4caf50;
+    border-radius: 50%;
+    animation: tcb-spin 0.8s linear infinite;
+  }
+
+  @keyframes tcb-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #tcb-page-transition-overlay .tcb-transition-text {
+    color: #ffffff;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+  }
+
+  /* Base wrapper with maximum specificity to prevent conflicts */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget {
+    /* Custom properties scoped only to this widget */
+    --tcb-primary-100: #e8f5e9;
+    --tcb-primary-200: #c8e6c9;
+    --tcb-primary-500: #4caf50;
+    --tcb-primary-700: #2e7d32;
+    --tcb-primary-900: #1b5e20;
+    --tcb-nav-dark: #111111;
+    --tcb-nav-mid: #212121;
+    --tcb-nav-text: #ffffff;
+    --tcb-accent-500: #ffb300;
+    --tcb-accent-700: #ffa000;
+    --tcb-neutral-0: #ffffff;
+    --tcb-neutral-50: #f8fafc;
+    --tcb-neutral-100: #f1f5f9;
+    --tcb-neutral-200: #e2e8f0;
+    --tcb-neutral-300: #cbd5e1;
+    --tcb-neutral-500: #64748b;
+    --tcb-neutral-700: #334155;
+    --tcb-neutral-900: #0f172a;
+    --tcb-font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --tcb-text-primary: var(--tcb-neutral-900);
+    --tcb-text-secondary: var(--tcb-neutral-500);
+    --tcb-radius-sm: 4px;
+    --tcb-radius-md: 8px;
+    --tcb-radius-lg: 16px;
+    --tcb-radius-full: 9999px;
+    --tcb-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tcb-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tcb-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tcb-transition: 0.3s;
+
+    /* Widget reset - prevent inheritance */
+    position: relative !important;
+    box-sizing: border-box !important;
+    font-family: var(--tcb-font-primary) !important;
+    line-height: 1.6 !important;
+    font-size: 16px !important;
+    color: var(--tcb-text-primary) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 1000 !important;
+  }
+
+  /* Ensure all child elements use border-box and reset */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget *,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget *::before,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget *::after {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: inherit !important;
+  }
+
+  /* Links within widget - prevent Elementor link styling conflicts */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget a {
+    color: var(--tcb-primary-700) !important;
+    text-decoration: none !important;
+    transition: color var(--tcb-transition) ease !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget a:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget a:focus {
+    color: var(--tcb-primary-900) !important;
+    text-decoration: none !important;
+    outline: none !important;
+  }
+
+  /* Container utility */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-container {
+    width: 100% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    min-height: 80px !important;
+    position: relative !important;
+    gap: 1.5rem !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+   CONTACT BAR - Clean Single-Row Design
+   ═══════════════════════════════════════════════════════════ */
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-bar {
+    background: linear-gradient(135deg, #1A3A1A 0%, #2D4A2B 50%, #1b5e20 100%) !important;
+    border-bottom: 1px solid rgba(135, 145, 125, 0.2) !important;
+    padding: 0.625rem 0 !important;
+    position: relative !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-bar::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%) !important;
+    pointer-events: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-container {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    flex-wrap: nowrap !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Contact Links (Phone & Email) */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    color: #ffffff !important;
+    font-size: 1.125rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: all 0.3s ease !important;
+    padding: 0.5rem 0.625rem !important;
+    border-radius: 4px !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-label {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-value {
+    color: #ffffff !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-link:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  /* Contact Icons - Show on desktop and mobile */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2.375rem !important;
+    /* ~38px (Increased by 10px) */
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    margin-right: 0.375rem !important;
+    color: #ffffff !important;
+    opacity: 0.9 !important;
+  }
+
+  /* Contact Text Wrapper */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-text {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+  }
+
+  /* Directions Button */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+    border: none !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+    flex-shrink: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    transform: translateY(-1px) !important;
+    color: #ffffff !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn:hover .tcb-directions-text,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn:hover .tcb-directions-icon {
+    color: #ffffff !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn:active {
+    background: transparent !important;
+    transform: translateY(0) !important;
+    color: #ffffff !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn:active .tcb-directions-text,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn:active .tcb-directions-icon {
+    color: #ffffff !important;
+  }
+
+  /* Directions Icon - Show on desktop and mobile */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2.375rem !important;
+    /* ~38px (Increased by 10px) */
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    margin-right: 0.375rem !important;
+    color: #ffffff !important;
+    opacity: 0.9 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-text {
+    display: inline !important;
+    color: #ffffff !important;
+  }
+
+  /* Responsive - Keep Single Row */
+  @media (max-width: 968px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-container {
+      gap: 1.25rem !important;
+      padding: 0 1.25rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-label {
+      font-size: 0.875rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-value {
+      font-size: 0.9375rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn {
+      font-size: 0.9375rem !important;
+      padding: 0.5rem 1rem !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-container {
+      gap: 0.625rem !important;
+      padding: 0 0.875rem !important;
+    }
+
+    /* Show icons only, hide text on mobile */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-icon {
+      font-size: 2.25rem !important;
+      margin-right: 0 !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-instagram-link .tcb-contact-icon {
+      width: 23px !important;
+      height: 23px !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-text {
+      display: none !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-link {
+      padding: 1rem !important;
+      min-width: 5rem !important;
+      justify-content: center !important;
+    }
+
+    /* Show map icon only for directions */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-icon {
+      font-size: 2.25rem !important;
+      margin-right: 0 !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-text {
+      display: none !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn {
+      font-size: 1.625rem !important;
+      padding: 1rem !important;
+      min-width: 5rem !important;
+      justify-content: center !important;
+    }
+  }
+
+  @media (max-width: 580px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-bar {
+      padding: 0.4375rem 0 !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-container {
+      gap: 0.5rem !important;
+      padding: 0 0.625rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-icon {
+      font-size: 2rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-link {
+      padding: 0.875rem !important;
+      min-width: 4.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-icon {
+      font-size: 2rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn {
+      padding: 0.875rem !important;
+      min-width: 4.5rem !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-container {
+      gap: 0.375rem !important;
+      padding: 0 0.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-icon {
+      font-size: 1.875rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-link {
+      padding: 0.75rem !important;
+      min-width: 4rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-icon {
+      font-size: 1.875rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn {
+      padding: 0.75rem !important;
+      min-width: 4rem !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-container {
+      gap: 0.25rem !important;
+      padding: 0 0.375rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-icon {
+      font-size: 1.75rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-contact-link {
+      padding: 0.625rem !important;
+      min-width: 3.75rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-icon {
+      font-size: 1.75rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-directions-btn {
+      padding: 0.625rem !important;
+      min-width: 3.75rem !important;
+    }
+  }
+
+  /* PROMO BAR - Fixed rotation and larger text */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-bar {
+    color: var(--tcb-neutral-0) !important;
+    font-size: 1.375rem !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
+    height: 56px !important;
+    overflow: hidden !important;
+    background: linear-gradient(270deg,
+        var(--tcb-primary-700),
+        #00bfff,
+        var(--tcb-primary-700)) !important;
+    background-size: 400% 400% !important;
+    animation: tcb-promo-pulsate 10s ease-in-out infinite !important;
+  }
+
+  /* Smooth collapse animation for promo bar - prevents layout flash */
+  /* Using height:0 forces element to stop taking space immediately during animation */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-bar.tcb-collapsed {
+    height: 0 !important;
+    /* the real trick - collapses flex item immediately */
+    max-height: 0 !important;
+    /* animatable collapse */
+    min-height: 0 !important;
+    /* override base min-height to allow full collapse */
+    padding-block: 0 !important;
+    /* remove vertical padding */
+    overflow: hidden !important;
+    /* hide content during collapse */
+    transition: height .35s ease;
+    /* one property = smoother animation */
+  }
+
+  @keyframes tcb-promo-pulsate {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deals-container {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* SLOWER ROTATING ANIMATION - Enhanced upward rotation */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1rem 4rem !important;
+    opacity: 0 !important;
+    transform: translateY(60px) scale(0.95) !important;
+    /* Start further down with slight scale */
+    transition: all 1.8s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    /* Much slower, smoother easing */
+    white-space: nowrap !important;
+    font-size: 1.375rem !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item.tcb-active {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    /* Perfect position with normal scale */
+    position: relative !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item.tcb-exit {
+    opacity: 0 !important;
+    transform: translateY(-60px) scale(0.95) !important;
+    /* Exit upward with slight scale down */
+  }
+
+  /* Add a subtle shadow during active state for depth */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item.tcb-active {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item.tcb-is-overflowing {
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-text-content {
+    display: inline-block !important;
+    transition: transform 2s ease-in-out !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item.tcb-is-overflowing .tcb-deal-text-content {
+    animation: tcb-vertical-rotate 6s ease-in-out infinite !important;
+  }
+
+  @keyframes tcb-vertical-rotate {
+    0% {
+      transform: translateY(0) !important;
+    }
+
+    25% {
+      transform: translateY(-8px) !important;
+    }
+
+    50% {
+      transform: translateY(0) !important;
+    }
+
+    75% {
+      transform: translateY(8px) !important;
+    }
+
+    100% {
+      transform: translateY(0) !important;
+    }
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-bar a {
+    color: var(--tcb-neutral-0) !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-bar a:hover {
+    color: var(--tcb-primary-100) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-close-btn {
+    position: absolute !important;
+    right: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: none !important;
+    border: none !important;
+    color: var(--tcb-primary-200) !important;
+    cursor: pointer !important;
+    padding: 0.75rem !important;
+    line-height: 1 !important;
+    font-size: 1.75rem !important;
+    opacity: 0.8 !important;
+    transition: all var(--tcb-transition) ease !important;
+    z-index: 999 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-close-btn:hover {
+    color: var(--tcb-neutral-0) !important;
+    opacity: 1 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: var(--tcb-radius-full) !important;
+  }
+
+  /* MAIN NAVIGATION - HIGHER Z-INDEX */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-main-nav {
+    background: radial-gradient(ellipse at top left,
+        rgba(22, 78, 45, 0.15),
+        transparent 60%),
+      radial-gradient(ellipse at bottom right,
+        rgba(16, 60, 35, 0.2),
+        transparent 50%),
+      linear-gradient(170deg, #0f2419 0%, #0a1a10 100%) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 2147483646 !important;
+    transition: box-shadow var(--tcb-transition) ease !important;
+    border-bottom: 1px solid transparent !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-main-nav.tcb-scrolled {
+    box-shadow: var(--tcb-shadow-md) !important;
+  }
+
+  /* Logo - Larger size */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-logo-img {
+    height: 56px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    transition: transform var(--tcb-transition) ease !important;
+    filter: brightness(0) invert(1) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-logo:hover .tcb-logo-img {
+    transform: scale(1.05) !important;
+  }
+
+  /* Desktop Navigation Menu - Larger text */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-desktop {
+    display: flex !important;
+    list-style: none !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-item>.tcb-nav-link {
+    padding: 0.75rem 1rem !important;
+    border-radius: var(--tcb-radius-md) !important;
+    font-weight: 600 !important;
+    color: var(--tcb-nav-text) !important;
+    transition: all var(--tcb-transition) ease !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    font-size: 1.25rem !important;
+    white-space: nowrap !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-item>.tcb-nav-link:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: var(--tcb-nav-text) !important;
+    text-decoration: none !important;
+  }
+
+  /* Search Form - BEAUTIFUL STYLING */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-form {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Autocomplete Dropdown */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-dropdown {
+    position: absolute !important;
+    top: calc(100% + 0.5rem) !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(200, 200, 200, 0.5) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    z-index: 10000 !important;
+    display: none !important;
+    margin: 0 !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-dropdown.tcb-show {
+    display: block !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item {
+    padding: 0.75rem 1rem !important;
+    cursor: pointer !important;
+    color: #1a1a1a !important;
+    font-size: 0.9375rem !important;
+    transition: background-color 0.2s ease !important;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.1) !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item:last-child {
+    border-bottom: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item.tcb-active {
+    background: rgba(76, 175, 80, 0.1) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item-icon {
+    color: rgba(76, 175, 80, 0.6) !important;
+    font-size: 0.875rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item-text {
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-autocomplete-item strong {
+    color: #2e7d32 !important;
+    font-weight: 700 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.25rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    backdrop-filter: none !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-wrapper:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-wrapper:focus-within {
+    background: #ffffff !important;
+    border-color: #4caf50 !important;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    color: #1a1a1a !important;
+    font-size: 1rem !important;
+    padding: 0.375rem 0.625rem !important;
+    width: 200px !important;
+    font-family: var(--tcb-font-primary) !important;
+    transition: width 0.3s ease !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input::placeholder {
+    color: #94a3b8 !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input:focus {
+    width: 300px !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input:-webkit-autofill,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input:-webkit-autofill:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input:-webkit-autofill:focus,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-input:-webkit-autofill:active {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-btn {
+    background: transparent !important;
+    border: none !important;
+    color: rgba(80, 80, 80, 0.8) !important;
+    cursor: pointer !important;
+    padding: 0.5rem 0.75rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: color 0.3s ease !important;
+    min-width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-btn:hover {
+    color: #2e7d32 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-btn i,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-btn svg {
+    color: #64748b !important;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+    display: block !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-search-btn:hover svg {
+    transform: scale(1.1) !important;
+  }
+
+  /* Mobile Search Row - Hidden on Desktop */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-row {
+    display: none !important;
+    width: 100% !important;
+    padding: 0.75rem 0 !important;
+    margin: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form {
+    width: 100% !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-wrapper {
+    width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input {
+    width: 100% !important;
+    color: #1a1a1a !important;
+    font-size: 1rem !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input::placeholder {
+    color: #94a3b8 !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input:focus {
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input:-webkit-autofill,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input:-webkit-autofill:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input:-webkit-autofill:focus,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-input:-webkit-autofill:active {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-btn i,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-header-search-form .tcb-search-btn svg {
+    color: #64748b !important;
+  }
+
+  /* Mobile Search Container */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-container {
+    padding: 1rem 1.5rem !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+    border-bottom: 1px solid rgba(76, 175, 80, 0.1) !important;
+    margin: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-wrapper {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input {
+    width: 100% !important;
+    color: #1a1a1a !important;
+    font-size: 1rem !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input::placeholder {
+    color: #94a3b8 !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input:focus {
+    width: 100% !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input:-webkit-autofill,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input:-webkit-autofill:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input:-webkit-autofill:focus,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-input:-webkit-autofill:active {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-btn i,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-form .tcb-search-btn svg {
+    color: #64748b !important;
+  }
+
+  /* Mobile Actions - HIGHER Z-INDEX */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-actions {
+    display: none;
+    align-items: center !important;
+    gap: 1rem !important;
+    position: relative !important;
+    z-index: 1150 !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+   MEGA MENU PANEL - Full-width organized product navigation
+   ═══════════════════════════════════════════════════════════ */
+
+  /* Mega trigger uses static positioning so panel can be full-width */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-trigger {
+    position: static !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-chevron-down {
+    font-size: 0.875rem !important;
+    transition: transform var(--tcb-transition) ease !important;
+    display: inline-block !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-trigger:hover .tcb-chevron-down,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-trigger.tcb-hover .tcb-chevron-down {
+    transform: rotate(180deg) !important;
+  }
+
+  /* The mega panel itself - full-width below nav */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    background: radial-gradient(ellipse at top left, rgba(22, 78, 45, 0.2), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(16, 60, 35, 0.15), transparent 50%),
+      linear-gradient(175deg, #0d1f15 0%, #0a1a10 40%, #081510 100%) !important;
+    border-top: 1px solid rgba(76, 175, 80, 0.2) !important;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.15) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(24px) saturate(1.2) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px) !important;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 2147483647 !important;
+    pointer-events: none !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Show mega panel on hover or active class */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-trigger:hover .tcb-mega-panel,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel.tcb-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+
+  /* Inner container with max-width */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-inner {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 1.75rem 2.5rem 2rem !important;
+  }
+
+  /* ── Quick Access Row ── */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-quick-row {
+    display: flex !important;
+    gap: 1rem !important;
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-quick-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 1rem 1.75rem !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    flex: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-quick-link:hover {
+    background: rgba(76, 175, 80, 0.14) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.15) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-shop-all {
+    background: rgba(76, 175, 80, 0.1) !important;
+    border-color: rgba(76, 175, 80, 0.2) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-specials-link {
+    background: rgba(255, 140, 0, 0.1) !important;
+    border-color: rgba(255, 140, 0, 0.2) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-specials-link:hover {
+    background: rgba(255, 140, 0, 0.18) !important;
+    border-color: rgba(255, 140, 0, 0.35) !important;
+    box-shadow: 0 4px 16px rgba(255, 140, 0, 0.15) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-quick-icon {
+    font-size: 1.5rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-quick-text {
+    white-space: nowrap !important;
+  }
+
+  /* ── Category Grid - 4 Columns ── */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  /* Column headings */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-heading {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: rgba(76, 175, 80, 0.85) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 0.75rem 0.75rem !important;
+    margin-bottom: 0.375rem !important;
+    border-bottom: 1px solid rgba(76, 175, 80, 0.12) !important;
+    font-family: "Inter", system-ui, sans-serif !important;
+  }
+
+  /* Category links */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.875rem !important;
+    padding: 0.875rem 0.75rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 1.45rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    font-family: "Inter", system-ui, sans-serif !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-link:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+    transform: translateX(4px) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-link-icon {
+    font-size: 1.5rem !important;
+    width: 2rem !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-link:hover .tcb-mega-link-icon {
+    transform: scale(1.15) !important;
+  }
+
+  /* Featured link (Flower) - subtle highlight */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-featured {
+    background: rgba(76, 175, 80, 0.07) !important;
+    border: 1px solid rgba(76, 175, 80, 0.12) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-featured:hover {
+    background: rgba(76, 175, 80, 0.16) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.15) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-featured:hover .tcb-mega-link-icon {
+    transform: scale(1.2) !important;
+  }
+
+  /* Hamburger Menu - HIGHER Z-INDEX */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-hamburger {
+    display: none;
+    flex-direction: column !important;
+    gap: 6px !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    border: none !important;
+    background: transparent !important;
+    z-index: 1200 !important;
+    position: relative !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-burger-line {
+    width: 28px !important;
+    height: 3px !important;
+    background: var(--tcb-nav-text) !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease-in-out !important;
+    display: block !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-hamburger.tcb-active .tcb-burger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-hamburger.tcb-active .tcb-burger-line:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-hamburger.tcb-active .tcb-burger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg) !important;
+  }
+
+  /* Mobile Menu - HIGHER Z-INDEX TO APPEAR ABOVE SECONDARY NAV */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-mobile {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    background: radial-gradient(ellipse at top left,
+        rgba(22, 78, 45, 0.15),
+        transparent 60%),
+      linear-gradient(170deg, #0f2419 0%, #0a1a10 100%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    z-index: 2147483647 !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+    transform: translateX(-100%) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-mobile.tcb-active {
+    transform: translateX(0) !important;
+  }
+
+  /* Mobile Menu Header */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 1.5rem !important;
+    height: 80px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-shrink: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-logo-img {
+    height: 48px !important;
+    filter: brightness(0) invert(1) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-close-btn {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    font-size: 2rem !important;
+    color: var(--tcb-nav-text) !important;
+    line-height: 1 !important;
+  }
+
+  /* Enhanced Mobile Search Section - Fixed for WordPress/Elementor */
+  .tcb-nav-menu-mobile .tcb-mobile-search-section,
+  #tcbNavMenuMobile .tcb-mobile-search-section,
+  div#tcb-nav-widget-wrapper .tcb-mobile-search-section,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-section {
+    display: block !important;
+    padding: 1.5rem !important;
+    background: rgba(46, 125, 50, 0.3) !important;
+    border-bottom: 2px solid #4caf50 !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 100px !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+  }
+
+  .tcb-mobile-search-container,
+  #tcbNavMenuMobile .tcb-mobile-search-container,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-container {
+    display: flex !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    visibility: visible !important;
+  }
+
+
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-suggestion-header {
+    display: block !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #666 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 0.75rem !important;
+    padding: 0 0.5rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-suggestion-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.75rem !important;
+    margin-bottom: 0.25rem !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    transition: all 0.2s ease !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(46, 125, 50, 0.1) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-suggestion-item:hover {
+    background: rgba(46, 125, 50, 0.1) !important;
+    color: #2e7d32 !important;
+    transform: translateX(4px) !important;
+    border-color: rgba(46, 125, 50, 0.3) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-suggestion-item:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-suggestion-item i,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-suggestion-item::before {
+    margin-right: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+
+  @keyframes tcbFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* Mobile Menu Height Fix for iOS/Android */
+  @media (max-width: 768px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-mobile {
+      height: 100vh !important;
+      height: 100dvh !important;
+      max-height: 100vh !important;
+      max-height: 100dvh !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)) !important;
+    }
+  }
+
+  /* Mobile Search Row - Improved UI/UX with Hamburger Menu */
+  @media (max-width: 768px) {
+
+
+    /* Mobile hamburger styling */
+    .tcb-mobile-hamburger {
+      background: none !important;
+      border: none !important;
+      cursor: pointer !important;
+      padding: 0.375rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 40px !important;
+      height: 40px !important;
+      gap: 3px !important;
+      border-radius: 8px !important;
+      transition: background-color 0.2s ease !important;
+    }
+
+    .tcb-mobile-hamburger:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .tcb-mobile-hamburger:active {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .tcb-mobile-burger-line {
+      display: block !important;
+      width: 20px !important;
+      height: 2px !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      transition: all 0.3s ease !important;
+      border-radius: 1px !important;
+    }
+
+    /* Active state for mobile hamburger */
+    .tcb-mobile-hamburger.tcb-active .tcb-mobile-burger-line:nth-child(1) {
+      transform: translateY(5px) rotate(45deg) !important;
+    }
+
+    .tcb-mobile-hamburger.tcb-active .tcb-mobile-burger-line:nth-child(2) {
+      opacity: 0 !important;
+    }
+
+    .tcb-mobile-hamburger.tcb-active .tcb-mobile-burger-line:nth-child(3) {
+      transform: translateY(-5px) rotate(-45deg) !important;
+    }
+
+  }
+
+  @media (min-width: 769px) {
+
+    /* Hide mobile hamburger on desktop */
+    .tcb-mobile-hamburger {
+      display: none !important;
+    }
+
+    /* Hide ALL hamburger menus on desktop - desktop should only show full nav menu */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-actions,
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-hamburger,
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget #tcbHamburger {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    /* Ensure desktop navigation menu is fully visible and takes available space */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-desktop {
+      display: flex !important;
+      visibility: visible !important;
+      flex: 1 !important;
+    }
+
+    /* Ensure nav container properly layouts without hamburger */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-container {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+  }
+
+  /* Modern Mobile Menu Body */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body {
+    flex: 1 !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    min-height: 0 !important;
+    max-height: calc(100vh - 260px) !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent !important;
+  }
+
+  /* Custom Scrollbar - Glass/Invisible Effect */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body::-webkit-scrollbar {
+    width: 6px !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+  }
+
+  /* Navigation List */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.75rem !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+   MOBILE QUICK ACTIONS GRID - 2x2 Card Layout
+   ═══════════════════════════════════════════════════════════ */
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+    padding: 0 0.25rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    padding: 1.25rem 1rem !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card:active {
+    background: rgba(76, 175, 80, 0.12) !important;
+    border-color: rgba(76, 175, 80, 0.25) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-specials {
+    background: rgba(255, 140, 0, 0.08) !important;
+    border-color: rgba(255, 140, 0, 0.15) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-specials:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-specials:active {
+    background: rgba(255, 140, 0, 0.18) !important;
+    border-color: rgba(255, 140, 0, 0.3) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card-icon {
+    font-size: 2rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card-label {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+   MOBILE ACCORDION - Collapsible category groups
+   ═══════════════════════════════════════════════════════════ */
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-item {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    transition: border-color 0.3s ease !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-item.tcb-open {
+    border-color: rgba(76, 175, 80, 0.2) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-trigger {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    padding: 1.25rem 1.25rem !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.45rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    transition: all 0.2s ease !important;
+    font-family: inherit !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-trigger:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-trigger:active {
+    background: rgba(76, 175, 80, 0.06) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-item.tcb-open .tcb-accordion-trigger {
+    background: rgba(76, 175, 80, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-trigger-icon {
+    font-size: 1.75rem !important;
+    width: 2.25rem !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-trigger-text {
+    flex: 1 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-chevron {
+    font-size: 1.5rem !important;
+    color: rgba(255, 255, 255, 0.35) !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease !important;
+    transform: rotate(0deg) !important;
+    flex-shrink: 0 !important;
+    font-weight: 300 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-item.tcb-open .tcb-accordion-chevron {
+    transform: rotate(90deg) !important;
+    color: rgba(76, 175, 80, 0.8) !important;
+  }
+
+  /* Accordion content - smooth height animation */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-item.tcb-open .tcb-accordion-content {
+    max-height: 500px !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem 1.25rem 1rem 3.5rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    background: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-link:last-child {
+    border-bottom: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-link:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-link:active {
+    background: rgba(76, 175, 80, 0.1) !important;
+    color: #ffffff !important;
+    padding-left: 3.75rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-link-icon {
+    font-size: 1.4rem !important;
+    width: 1.75rem !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+   MOBILE NAV SECTIONS (Explore, Services) - kept from original
+   ═══════════════════════════════════════════════════════════ */
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-section-heading {
+    margin: 0 !important;
+    padding: 0 1.25rem !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-rows {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    padding: 1.25rem 1.5rem !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-row:last-child {
+    border-bottom: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-row:hover,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-row:active {
+    background: rgba(76, 175, 80, 0.08) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-row-icon {
+    font-size: 1.75rem !important;
+    flex-shrink: 0 !important;
+    width: 2.25rem !important;
+    text-align: center !important;
+    opacity: 0.9 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-row-text {
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  /* Ultra-small screens - optimized for accordion + card layout */
+  @media (max-width: 480px) {
+
+    /* Adjust mobile menu body height for smaller screens */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body {
+      max-height: calc(100vh - 280px) !important;
+      padding: 0.75rem !important;
+      gap: 1.25rem !important;
+    }
+
+    /* Adjust row padding for small screens */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-row {
+      padding: 1.125rem 1.25rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-row-text {
+      font-size: 1.4rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-row-icon {
+      font-size: 1.6rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-section-heading {
+      font-size: 1.4rem !important;
+    }
+
+    /* Ensure mobile menu footer has proper spacing */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+      padding: 1rem !important;
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+      min-height: 160px !important;
+    }
+  }
+
+  /* Mobile landscape orientation - prevent height issues */
+  @media (max-height: 500px) and (orientation: landscape) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body {
+      max-height: calc(100vh - 200px) !important;
+      padding: 0.5rem !important;
+      gap: 0.75rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-row {
+      padding: 1.125rem 1.25rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-row-text {
+      font-size: 1.125rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-row-icon {
+      font-size: 1.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+      padding: 0.75rem !important;
+      padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)) !important;
+      min-height: 120px !important;
+    }
+  }
+
+  /* Ensure footer content is always visible on mobile */
+  @media (max-width: 768px) {
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-address,
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-license {
+      margin-bottom: 0.5rem !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Ensure minimum spacing for address and license */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+  }
+
+  /* Elementor-specific mobile menu fixes */
+  .elementor-widget div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer,
+  .elementor div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+    min-height: 200px !important;
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom)) !important;
+  }
+
+  .elementor-widget div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body,
+  .elementor div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body {
+    max-height: calc(100vh - 280px) !important;
+  }
+
+  /* Clean, Elegant Mobile Navigation Links */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-link {
+    display: block !important;
+    padding: 1.25rem 1.5rem !important;
+    color: rgba(255, 255, 255, 1) !important;
+    text-decoration: none !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-link:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding-left: 2rem !important;
+    text-decoration: none !important;
+  }
+
+  /* Sub-links for categories */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-link.tcb-sub-link {
+    padding: 1rem 2rem !important;
+    font-size: 1.25rem !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    border: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-link.tcb-sub-link:hover {
+    padding-left: 2.5rem !important;
+    color: rgba(255, 255, 255, 1) !important;
+  }
+
+  /* Section headings */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-heading {
+    padding: 1.5rem 1.5rem 0.5rem !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  /* Section containers */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-section {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Divider */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-divider {
+    height: 1px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin: 1.5rem 1.5rem !important;
+  }
+
+  /* External links */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-link.tcb-external {
+    color: rgba(76, 175, 80, 0.9) !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-link.tcb-external:hover {
+    color: rgba(76, 175, 80, 1) !important;
+  }
+
+
+  /* Legacy mobile dropdown CSS removed - replaced by accordion */
+
+  /* Mobile Menu Footer */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+    padding: 1.5rem !important;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)) !important;
+    background: rgba(0, 0, 0, 0.25) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    min-height: 180px !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-cta {
+    background: var(--tcb-primary-700) !important;
+    color: white !important;
+    padding: 1.25rem 1rem !important;
+    border-radius: var(--tcb-radius-md) !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+    margin-bottom: 1.25rem !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.875rem !important;
+    text-decoration: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-cta:hover {
+    background: var(--tcb-primary-900) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--tcb-shadow-md) !important;
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-button-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.625rem !important;
+    padding: 1rem 0.75rem !important;
+    border-radius: var(--tcb-radius-md) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: var(--tcb-neutral-0) !important;
+    font-weight: 600 !important;
+    font-size: 1.0625rem !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-button:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: var(--tcb-neutral-0) !important;
+    text-decoration: none !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-address {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.0625rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.625rem !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-license {
+    text-align: center !important;
+    font-size: 0.9375rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  /* Overlay - HIGHER Z-INDEX */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-overlay {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(15, 23, 42, 0.5) !important;
+    backdrop-filter: blur(4px) !important;
+    z-index: 9999 !important;
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-overlay.tcb-active {
+    display: block !important;
+  }
+
+  /* Body class for menu open state - prevent scroll and hide secondary nav */
+  body.tcb-menu-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    touch-action: none !important;
+  }
+
+  /* When mobile menu is open, hide the main navigation bar to prevent overlap */
+  body.tcb-menu-open .tcb-main-nav {
+    display: none !important;
+  }
+
+  /* Hide or lower secondary navigation when mobile menu is open */
+  body.tcb-menu-open .cannabar-nav-centered {
+    z-index: 50 !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* RESPONSIVE - Matching Elementor breakpoints exactly - ORIGINAL LOGIC */
+  @media (max-width: 1024px) {
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-desktop,
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-actions {
+      display: none !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-hamburger,
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-actions {
+      display: flex !important;
+    }
+
+    /* Show mobile search row on its own line */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-search-row {
+      display: block !important;
+      order: 3 !important;
+    }
+
+    /* Make nav container wrap */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-container {
+      flex-wrap: wrap !important;
+    }
+
+    /* Logo and hamburger on first row */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-logo {
+      order: 1 !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-nav-actions {
+      order: 2 !important;
+    }
+  }
+
+  /* Desktop text size increase by 20% */
+  @media (min-width: 1025px) {
+
+    /* Navigation links - 1.25rem * 1.2 = 1.5rem */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-item>.tcb-nav-link {
+      font-size: 1.5rem !important;
+    }
+
+
+    /* Promo bar text - 1.375rem * 1.2 = 1.65rem */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-bar {
+      font-size: 1.65rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item {
+      font-size: 1.65rem !important;
+    }
+
+    /* Footer CTA text - 1.125rem * 1.2 = 1.35rem */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-cta {
+      font-size: 1.35rem !important;
+    }
+
+    /* Footer button text - 1.0625rem * 1.2 = 1.275rem */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-button {
+      font-size: 1.275rem !important;
+    }
+
+    /* Footer address text - 1.0625rem * 1.2 = 1.275rem */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-footer-address {
+      font-size: 1.275rem !important;
+    }
+  }
+
+  /* Large Desktop - Enhanced mega menu spacing */
+  @media (min-width: 1200px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-inner {
+      padding: 2rem 3rem 2.25rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-grid {
+      gap: 2.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-link {
+      padding: 1rem 0.875rem !important;
+      font-size: 1.45rem !important;
+    }
+
+    /* Flower category hover enhancement on large screens */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-featured:hover .tcb-mega-link-icon {
+      transform: scale(1.2) !important;
+    }
+  }
+
+  /* Ultra Large Desktop - Enhanced mega menu */
+  @media (min-width: 1600px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-inner {
+      padding: 2.25rem 3.5rem 2.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-grid {
+      gap: 3rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-link {
+      padding: 1.125rem 1rem !important;
+      font-size: 1.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-heading {
+      font-size: 1.45rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-quick-link {
+      padding: 1.125rem 2rem !important;
+      font-size: 1.45rem !important;
+    }
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 767px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-promo-bar {
+      font-size: 1.25rem !important;
+      min-height: 52px !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item {
+      padding: 0.75rem 3rem !important;
+      font-size: 1.25rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-container {
+      padding: 0 1rem !important;
+      min-height: 72px !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-logo-img {
+      height: 48px !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-logo-img {
+      height: 42px !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-mobile {
+      max-width: 100% !important;
+    }
+  }
+
+  /* Ultra-small screens */
+  @media (max-width: 480px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-deal-item {
+      font-size: 1.125rem !important;
+      padding: 0.625rem 2.5rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-container {
+      padding: 0 0.75rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-body,
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mobile-menu-footer {
+      padding: 1rem !important;
+    }
+
+    /* Accordion adjustments for very small screens */
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-trigger {
+      padding: 1rem 1rem !important;
+      font-size: 1.4rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-accordion-link {
+      padding: 0.875rem 1rem 0.875rem 3rem !important;
+      font-size: 1.4rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card {
+      padding: 1rem 0.75rem !important;
+    }
+
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-quick-card-label {
+      font-size: 1.4rem !important;
+    }
+  }
+
+  /* Ensure this widget never conflicts with Elementor admin or editor */
+  .elementor-editor-active div#tcb-nav-widget-wrapper.tcb-custom-nav-widget {
+    position: relative !important;
+    z-index: auto !important;
+  }
+
+  /* Prevent conflicts with WordPress admin bar */
+  .admin-bar div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-mobile {
+    top: 32px !important;
+    min-height: calc(100vh - 32px) !important;
+  }
+
+  @media (max-width: 782px) {
+    .admin-bar div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-nav-menu-mobile {
+      top: 46px !important;
+      min-height: calc(100vh - 46px) !important;
+    }
+  }
+
+  /* Legacy Elementor mobile dropdown fixes removed - replaced by accordion */
+
+  /* MEGA MENU Z-INDEX OVERRIDE RULES - Enhanced for Elementor conflicts */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel {
+    z-index: 2147483647 !important;
+    position: fixed !important;
+    will-change: auto !important;
+    isolation: isolate !important;
+  }
+
+  /* Ensure mega trigger creates proper stacking context */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-trigger:hover {
+    isolation: isolate !important;
+    z-index: 2147483647 !important;
+  }
+
+  /* Override Elementor z-index conflicts for mega panel */
+  .elementor-element div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel,
+  .elementor-widget div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel,
+  .elementor-section div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel,
+  .elementor-container div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel,
+  body.elementor-page div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel,
+  body div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel {
+    z-index: 2147483647 !important;
+    position: fixed !important;
+    will-change: auto !important;
+    isolation: isolate !important;
+    contain: none !important;
+  }
+
+  /* Override CSS containment/transforms on parent elements */
+  .elementor-page div#tcb-nav-widget-wrapper.tcb-custom-nav-widget,
+  .elementor-section div#tcb-nav-widget-wrapper.tcb-custom-nav-widget,
+  .elementor-container div#tcb-nav-widget-wrapper.tcb-custom-nav-widget {
+    transform: none !important;
+    will-change: auto !important;
+    contain: none !important;
+    isolation: auto !important;
+  }
+
+  /* Hide mega panel on mobile/tablet (handled by hamburger menu instead) */
+  @media (max-width: 1024px) {
+    div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-mega-panel {
+      display: none !important;
+    }
+  }
+
+  /* Fix Font Awesome Icons */
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .fas,
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .fa-solid {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+  }
+
+  /* Flickering Flame Animation */
+  @keyframes tcb-flame-flicker {
+
+    0%,
+    100% {
+      color: #FF4500;
+      /* OrangeRed */
+      transform: scale(1);
+      filter: drop-shadow(0 0 2px rgba(255, 69, 0, 0.3));
+    }
+
+    25% {
+      color: #FF8C00;
+      /* DarkOrange */
+      transform: scale(1.1) rotate(-2deg);
+    }
+
+    50% {
+      color: #FFD700;
+      /* Gold */
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    75% {
+      color: #FFA500;
+      /* Orange */
+      transform: scale(0.95);
+    }
+  }
+
+  div#tcb-nav-widget-wrapper.tcb-custom-nav-widget .tcb-bounce-icon {
+    display: inline-block;
+    animation: tcb-flame-flicker 0.8s infinite alternate ease-in-out;
+    margin-right: 6px;
+    font-style: normal;
+  }
+</style>
+
+<script>
+  (function () {
+    'use strict';
+
+    // Check if we're in Elementor editor mode
+    function isElementorEditor() {
+      return (window.elementorFrontend && window.elementorFrontend.isEditMode()) ||
+        (window.elementor && window.elementor.hasOwnProperty('channels')) ||
+        (document.body.classList.contains('elementor-editor-active'));
+    }
+
+    // Initialize navigation only if not in editor
+    function initTCBNavigation() {
+      // Skip initialization in Elementor editor
+      if (isElementorEditor()) {
+        console.log('TCB Navigation: Skipping init in Elementor editor');
+        return;
+      }
+
+      const widgetWrapper = document.getElementById('tcb-nav-widget-wrapper');
+      if (!widgetWrapper) {
+        console.log('TCB Navigation: Widget wrapper not found');
+        return;
+      }
+
+      // Prevent multiple initializations
+      if (window.tcbNavigationInitialized) {
+        console.log('TCB Navigation: Already initialized, skipping...');
+        return;
+      }
+
+      console.log('TCB Navigation: Initializing...');
+      window.tcbNavigationInitialized = true;
+
+      // Navigation elements
+      const mainNav = widgetWrapper.querySelector('#tcbMainNav');
+      const hamburger = widgetWrapper.querySelector('#tcbHamburger');
+      const mobileHamburger = widgetWrapper.querySelector('#tcbMobileHamburger');
+      const navMenuMobile = widgetWrapper.querySelector('#tcbNavMenuMobile');
+      const mobileCloseBtn = widgetWrapper.querySelector('#tcbMobileCloseBtn');
+      const navOverlay = widgetWrapper.querySelector('#tcbNavOverlay');
+      const promoBar = widgetWrapper.querySelector('#tcbPromoBar');
+      const promoCloseBtn = widgetWrapper.querySelector('#tcbPromoCloseBtn');
+      const dealsContainer = widgetWrapper.querySelector('#tcbDealsContainer');
+      const pageTransitionOverlay = document.getElementById('tcb-page-transition-overlay');
+
+      // Page Transition Handler - Show loading overlay for smooth navigation
+      function initPageTransition() {
+        if (!pageTransitionOverlay) return;
+
+        // Show transition overlay when navigating to shop pages
+        function showTransition() {
+          // Close mobile menu first if open
+          if (navMenuMobile?.classList.contains('tcb-active')) {
+            toggleMobileMenu(false);
+          }
+          pageTransitionOverlay.classList.add('tcb-transition-active');
+        }
+
+        // Get all internal navigation links (shop, categories, etc.)
+        const allNavLinks = document.querySelectorAll([
+          '#tcb-nav-widget-wrapper a[href*="thecannabar.com/shop"]',
+          '#tcb-nav-widget-wrapper a[href*="thecannabar.com/gallery"]',
+          '#tcb-nav-widget-wrapper a[href*="thecannabar.com/events"]',
+          '#tcb-nav-widget-wrapper a[href*="thecannabar.com/loyalty"]',
+          '#tcb-nav-widget-wrapper a[href*="thecannabar.com/discounts"]',
+          '#tcb-nav-widget-wrapper .tcb-nav-row[href*="thecannabar.com"]',
+          '#tcb-nav-widget-wrapper .tcb-mega-link[href*="thecannabar.com"]',
+          '#tcb-nav-widget-wrapper .tcb-mega-quick-link[href*="thecannabar.com"]',
+          '#tcb-nav-widget-wrapper .tcb-accordion-link[href*="thecannabar.com"]',
+          '#tcb-nav-widget-wrapper .tcb-quick-card[href*="thecannabar.com"]'
+        ].join(','));
+
+        allNavLinks.forEach(link => {
+          // Skip external links (target="_blank") and anchor links
+          if (link.getAttribute('target') === '_blank' || link.getAttribute('href')?.startsWith('#')) {
+            return;
+          }
+
+          link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            // Only show transition for actual page navigations
+            if (href && !href.startsWith('#') && !href.startsWith('tel:') && !href.startsWith('mailto:') && !href.startsWith('sms:')) {
+              e.preventDefault();
+              showTransition();
+              // Small delay to show animation, then navigate
+              setTimeout(() => {
+                window.location.href = href;
+              }, 150);
+            }
+          });
+        });
+
+        // Hide overlay when page is loaded from cache (back button)
+        window.addEventListener('pageshow', (e) => {
+          if (e.persisted) {
+            pageTransitionOverlay.classList.remove('tcb-transition-active');
+          }
+        });
+
+        // Also hide on popstate (browser back/forward)
+        window.addEventListener('popstate', () => {
+          pageTransitionOverlay.classList.remove('tcb-transition-active');
+        });
+      }
+
+      // Check if promo was previously closed and remove immediately
+      if (promoBar) {
+        try {
+          if (sessionStorage.getItem('tcb-promo-closed') === 'true') {
+            promoBar.remove();   // no animation on reload - instant removal
+            return; // Exit early since promo bar is gone
+          }
+        } catch (e) {
+          // Ignore if sessionStorage is not available
+        }
+      }
+
+      let promoInterval;
+      let currentDealIndex = 0;
+
+      // Mobile Menu Toggle - Enhanced with animations and scroll locking
+      let scrollPosition = 0;
+      const toggleMobileMenu = (isOpen) => {
+        const action = isOpen ? 'add' : 'remove';
+        hamburger?.classList[action]('tcb-active');
+        mobileHamburger?.classList[action]('tcb-active');
+        navMenuMobile?.classList[action]('tcb-active');
+
+        if (isOpen) {
+          // Store current scroll position before locking
+          scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+          // Apply scroll lock with position fix for iOS
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${scrollPosition}px`;
+          document.body.style.width = '100%';
+
+          // Animate menu items with stagger effect
+          const quickCards = navMenuMobile?.querySelectorAll('.tcb-quick-card');
+          const accordionItems = navMenuMobile?.querySelectorAll('.tcb-accordion-item');
+          const navSections = navMenuMobile?.querySelectorAll('.tcb-nav-section');
+          const allAnimatedItems = [
+            ...(quickCards || []),
+            ...(accordionItems || []),
+            ...(navSections || [])
+          ];
+
+          allAnimatedItems?.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(16px)';
+            setTimeout(() => {
+              item.style.transition = 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 60 + 100);
+          });
+        } else {
+          // Restore scroll position and unlock
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+          window.scrollTo(0, scrollPosition);
+        }
+
+        navOverlay?.classList[action]('tcb-active');
+        document.body.classList[action]('tcb-menu-open');
+
+        // Find and hide the secondary navigation menus
+        const secondaryNavs = document.querySelectorAll('.cannabar-nav-centered');
+        secondaryNavs.forEach(nav => {
+          nav.style.display = isOpen ? 'none' : '';
+        });
+
+        if (hamburger) {
+          hamburger.setAttribute('aria-expanded', isOpen);
+        }
+        if (mobileHamburger) {
+          mobileHamburger.setAttribute('aria-expanded', isOpen);
+        }
+        if (navMenuMobile) {
+          navMenuMobile.setAttribute('aria-hidden', !isOpen);
+        }
+      };
+
+      // Initialize page transition handler (must be after toggleMobileMenu is defined)
+      initPageTransition();
+
+      // Event Listeners - Updated for both hamburgers
+      if (hamburger) {
+        hamburger.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMobileMenu(true);
+        });
+      }
+
+      if (mobileHamburger) {
+        mobileHamburger.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMobileMenu(true);
+        });
+      }
+
+      if (mobileCloseBtn) {
+        mobileCloseBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMobileMenu(false);
+        });
+      }
+
+      if (navOverlay) {
+        navOverlay.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMobileMenu(false);
+        });
+      }
+
+      // Close menu on quick card click - accordion links handled separately below
+
+      // Legacy mobile dropdown code removed - replaced by accordion behavior above
+
+
+      // ═══ MEGA MENU - Full-width panel positioning & behavior ═══
+      const megaTrigger = widgetWrapper.querySelector('#tcbMegaTrigger');
+      const megaPanel = widgetWrapper.querySelector('#tcbMegaPanel');
+
+      if (megaTrigger && megaPanel && mainNav) {
+        let megaTimeout;
+
+        const positionMegaPanel = () => {
+          const navRect = mainNav.getBoundingClientRect();
+          megaPanel.style.top = `${navRect.bottom}px`;
+        };
+
+        const showMegaMenu = () => {
+          clearTimeout(megaTimeout);
+          positionMegaPanel();
+          megaPanel.classList.add('tcb-active');
+          megaTrigger.classList.add('tcb-hover');
+          megaTrigger.querySelector('.tcb-dropdown-toggle')?.setAttribute('aria-expanded', 'true');
+          megaPanel.setAttribute('aria-hidden', 'false');
+        };
+
+        const hideMegaMenu = () => {
+          megaTimeout = setTimeout(() => {
+            megaPanel.classList.remove('tcb-active');
+            megaTrigger.classList.remove('tcb-hover');
+            megaTrigger.querySelector('.tcb-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+            megaPanel.setAttribute('aria-hidden', 'true');
+          }, 180);
+        };
+
+        // Hover behavior with delay for smooth mouse movement
+        megaTrigger.addEventListener('mouseenter', showMegaMenu);
+        megaTrigger.addEventListener('mouseleave', hideMegaMenu);
+        megaPanel.addEventListener('mouseenter', () => clearTimeout(megaTimeout));
+        megaPanel.addEventListener('mouseleave', hideMegaMenu);
+
+        // Reposition on scroll/resize
+        window.addEventListener('scroll', positionMegaPanel, { passive: true });
+        window.addEventListener('resize', positionMegaPanel, { passive: true });
+        positionMegaPanel();
+
+        // Close mega menu when a link is clicked (for page transition)
+        megaPanel.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            clearTimeout(megaTimeout);
+            megaPanel.classList.remove('tcb-active');
+            megaTrigger.classList.remove('tcb-hover');
+          });
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && megaPanel.classList.contains('tcb-active')) {
+            hideMegaMenu();
+            clearTimeout(megaTimeout);
+            megaPanel.classList.remove('tcb-active');
+            megaTrigger.classList.remove('tcb-hover');
+          }
+        });
+      }
+
+      // ═══ MOBILE ACCORDION - Collapsible category groups ═══
+      const accordionTriggers = widgetWrapper.querySelectorAll('.tcb-accordion-trigger');
+      accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const item = trigger.closest('.tcb-accordion-item');
+          if (!item) return;
+
+          const isOpen = item.classList.contains('tcb-open');
+
+          // Close all other accordions (single-open behavior)
+          widgetWrapper.querySelectorAll('.tcb-accordion-item.tcb-open').forEach(openItem => {
+            if (openItem !== item) {
+              openItem.classList.remove('tcb-open');
+              openItem.querySelector('.tcb-accordion-trigger')?.setAttribute('aria-expanded', 'false');
+              openItem.querySelector('.tcb-accordion-content')?.setAttribute('aria-hidden', 'true');
+            }
+          });
+
+          // Toggle current accordion
+          item.classList.toggle('tcb-open', !isOpen);
+          trigger.setAttribute('aria-expanded', String(!isOpen));
+          item.querySelector('.tcb-accordion-content')?.setAttribute('aria-hidden', String(isOpen));
+        });
+      });
+
+      // Close mobile menu when accordion links or quick cards are clicked
+      const mobileMenuLinks = widgetWrapper.querySelectorAll('.tcb-accordion-link, .tcb-quick-card, .tcb-nav-row');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!link.getAttribute('target')) {
+            setTimeout(() => toggleMobileMenu(false), 150);
+          }
+        });
+      });
+
+      // SLOWER Promo Bar Deals Rotation - Enhanced Animation
+      if (promoBar && dealsContainer) {
+        const deals = [
+          '🏖️ Save Coastal Wildlife Beach Cleanup — 20% Off E-Jay! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🍬 Wana Edibles Limited Time — Sale 15% Off! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🌱 Jerzey Grown Limited Time — Sale 25% Off! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '✨ Clique Limited Time — Sale 25% Off! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🌿 Grown Rogue Limited Time — Sale 30% Off <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🎯 Labor Day Blowout — 20% Off Entire Store! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🔧 Journeyman Limited Time — Sale 25% Off! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🏔️ Hillview Farms Limited Time — Sale 25% Off! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '💎 Verano and the Essence Limited Time — Sale 25% Off! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🔊 Loud Labs — 30% Off! Limited Time <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '💰 Spend $150+, get Jersey Canna Combo Fruit Flavors or Cannajolt Dark Chocolate for $0.01 <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🎉 1906, Buy 2 for $50 — Limited Time! <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '🔓 CLEAR THE VAULT! 30% OFF <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>',
+          '☠️ END OF DAYS <a href="https://thecannabar.com/shop/?dtche%5Bpath%5D=specials" target="_self">Shop Now</a>'
+        ];
+
+        function checkOverflow(dealElement) {
+          // Small delay to ensure rendering is complete
+          setTimeout(() => {
+            if (!dealElement || !dealElement.querySelector('.tcb-deal-text-content')) return;
+
+            const textContent = dealElement.querySelector('.tcb-deal-text-content');
+            const containerWidth = dealElement.clientWidth - 120; // Account for close button
+            const textWidth = textContent.scrollWidth;
+            const isOverflowing = textWidth > containerWidth;
+
+            dealElement.classList.toggle('tcb-is-overflowing', isOverflowing);
+          }, 100);
+        }
+
+        function createDealElement(dealText, index) {
+          const dealElement = document.createElement('div');
+          dealElement.classList.add('tcb-deal-item');
+          if (index === 0) {
+            dealElement.classList.add('tcb-active');
+          }
+          dealElement.innerHTML = `<span class="tcb-deal-text-content">${dealText}</span>`;
+          return dealElement;
+        }
+
+        function initializeDeals() {
+          // Clear any existing deals
+          dealsContainer.innerHTML = '';
+
+          // Create deal elements
+          deals.forEach((deal, index) => {
+            const dealElement = createDealElement(deal, index);
+            dealsContainer.appendChild(dealElement);
+          });
+
+          // Check overflow for the first deal
+          const firstDeal = dealsContainer.querySelector('.tcb-deal-item.tcb-active');
+          if (firstDeal) {
+            checkOverflow(firstDeal);
+          }
+
+          // Start rotation - MUCH SLOWER (8 seconds per deal instead of 5)
+          if (deals.length > 1) {
+            promoInterval = setInterval(rotateDeals, 8000); // 8 seconds per deal for slower rotation
+          }
+        }
+
+        function rotateDeals() {
+          const dealItems = dealsContainer.querySelectorAll('.tcb-deal-item');
+          if (dealItems.length <= 1) return;
+
+          const currentDeal = dealItems[currentDealIndex];
+          if (!currentDeal) return;
+
+          // Remove overflow class and active state from current deal
+          currentDeal.classList.remove('tcb-is-overflowing', 'tcb-active');
+          currentDeal.classList.add('tcb-exit');
+
+          // Move to next deal
+          currentDealIndex = (currentDealIndex + 1) % deals.length;
+          const nextDeal = dealItems[currentDealIndex];
+
+          if (nextDeal) {
+            // Activate next deal
+            nextDeal.classList.add('tcb-active');
+            checkOverflow(nextDeal);
+
+            // Clean up exit class after longer animation (matching CSS transition duration)
+            setTimeout(() => {
+              currentDeal.classList.remove('tcb-exit');
+            }, 1800); // Match the 1.8s CSS transition duration
+          }
+        }
+
+        // Initialize deals
+        initializeDeals();
+
+        // Promo close button - Complete removal after animation
+        if (promoCloseBtn) {
+          promoCloseBtn.addEventListener('click', (e) => {
+            e.preventDefault();                       // stop link behaviour
+            promoBar.classList.add('tcb-collapsed');  // start animation
+            if (promoInterval) {
+              clearInterval(promoInterval);           // stop the ticker
+            }
+
+            // Store in sessionStorage to remember choice
+            try {
+              sessionStorage.setItem('tcb-promo-closed', 'true');
+            } catch (e) {
+              // Ignore if sessionStorage is not available
+            }
+
+            // When the transition ends, remove the node altogether
+            const onEnd = () => {                     // runs once
+              promoBar.removeEventListener('transitionend', onEnd);
+              promoBar.remove();                      // header re-flows, gap gone
+            };
+            promoBar.addEventListener('transitionend', onEnd);
+
+            // Accessibility improvements
+            promoCloseBtn.setAttribute('aria-expanded', 'false');
+            promoBar.setAttribute('aria-hidden', 'true');
+          });
+        }
+      }
+
+      // Sticky Navigation Shadow
+      const handleScroll = () => {
+        if (mainNav) {
+          const scrolled = window.pageYOffset > 20;
+          mainNav.classList.toggle('tcb-scrolled', scrolled);
+        }
+      };
+
+      // Throttled scroll handler for better performance
+      let scrollTimeout;
+      const throttledHandleScroll = () => {
+        if (!scrollTimeout) {
+          scrollTimeout = setTimeout(() => {
+            handleScroll();
+            scrollTimeout = null;
+          }, 16); // ~60fps
+        }
+      };
+
+      window.addEventListener('scroll', throttledHandleScroll, { passive: true });
+
+      // Escape key handler - ORIGINAL LOGIC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenuMobile?.classList.contains('tcb-active')) {
+          toggleMobileMenu(false);
+        }
+      });
+
+
+      // Handle window resize to update overflow states
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        if (resizeTimeout) clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const activeDeal = dealsContainer?.querySelector('.tcb-deal-item.tcb-active');
+          if (activeDeal) {
+            checkOverflow(activeDeal);
+          }
+        }, 250);
+      }, { passive: true });
+
+      // Search Form Handlers - Both Desktop and Mobile
+      const handleSearch = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const input = form.querySelector('.tcb-search-input');
+        const searchQuery = input.value.trim();
+
+        if (searchQuery) {
+          // Encode the search query for URL
+          const encodedQuery = encodeURIComponent(searchQuery);
+          // Redirect to shop with search parameter
+          window.location.href = `https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=${encodedQuery}`;
+        }
+      };
+
+      // Desktop Search Form
+      const desktopSearchForm = widgetWrapper.querySelector('#tcbSearchForm');
+      if (desktopSearchForm) {
+        desktopSearchForm.addEventListener('submit', handleSearch);
+        console.log('TCB Navigation: Desktop search form initialized');
+      }
+
+      // Mobile Search Form (in menu)
+      const mobileSearchForm = widgetWrapper.querySelector('#tcbMobileSearchForm');
+      if (mobileSearchForm) {
+        mobileSearchForm.addEventListener('submit', handleSearch);
+        console.log('TCB Navigation: Mobile menu search form initialized');
+      }
+
+      // Mobile Header Search Form (always visible on mobile)
+      const mobileHeaderSearchForm = widgetWrapper.querySelector('#tcbMobileHeaderSearchForm');
+      if (mobileHeaderSearchForm) {
+        mobileHeaderSearchForm.addEventListener('submit', handleSearch);
+        console.log('TCB Navigation: Mobile header search form initialized');
+      }
+
+      // Autocomplete Brands List
+      const brands = [
+        '1906', 'Shine', 'Agri Kind', 'Airo', 'Anthologie', 'Avexia', 'BackPackBoyz', 'Bass River Buds',
+        'Beboe', 'Bic', 'Bigheadz', 'Biss', 'Bits', 'Black Buddha', 'Black Label', 'Blazy Susan',
+        'Blissco', 'BLOOM', 'Blue Harvest', 'Bosky Labs', 'California Honey', 'Camino', 'Cartisan',
+        'Cheeba Chews', 'Cheetah', 'Chef Matt', 'Clade9', 'Clipper', 'Clique', 'COAST Cannabis',
+        'Cookies', 'Core Value', 'Craft Kings', 'Curio Wellness', 'Dank Diamonds', 'DaySavers', 'Djeep',
+        'Doctor Solomon', 'Dogwalkers', 'dreamt', 'Drool', 'E Jay', 'Edie Parker', 'Elyon',
+        'Encore Edibles', 'Escape Artist', 'Essential Extracts', 'Essence', 'Feelz', 'Focus V',
+        'Formula 420', 'G Fuse', 'G Stix', 'Garden Greens', 'Garden State Exotix', 'Garden State Mind',
+        'Glob Mops', 'Good Green', 'Good Tide', 'Green Joy', 'Green Lightning', 'Grown Rogue', 'Gron',
+        'Hamilton Farms', 'Hamsa', 'Hashables', 'Haze Mudd Brothers', 'Heavy Hitters', 'High Grass Farms',
+        'High Wired', 'Highsman', 'Hight', 'Hillview Farms', 'Honey Comb', 'Human Grade', 'Hyphen',
+        'ILLICIT', 'Incredibles', 'JAMS', 'Jersey Canna', 'Jersey Jellies', 'Jersey Joints',
+        'Jersey Sauce Boss', 'Jerzey Grown', 'Jerzy Landscapes', 'Jetty Extracts', 'Journeyman',
+        'Joy Stick', 'Just Woman Cannabis', 'Last Resort', 'Legend', 'LEVEL', 'Lily Extracts', 'Lobo',
+        'Locals Only', 'Lost Farm', 'LOUD', 'Lowell Herb', 'M80', 'Magic Garden Botanicals', 'Major',
+        'Manja Munchies', 'Melting Point Extracts', 'Miss Grass', 'Mr Moxeys Mints', 'nama',
+        'North Lake Supply', 'Nova Farms', 'NWTN', 'OGeez', 'Old Pal', 'Onyx', 'Oria', 'Ozone',
+        'Packpods', 'Panda Farms', 'Papas Herb', 'PAX', 'Pheno Tommy', 'PreRoll King Jersey', 'Puffco',
+        'Pyramid', 'Randys', 'RAW', 'Rejuv', 'Revelry', 'Rosin King Jersey', 'Rove', 'RYTHM',
+        'Santa Cruz Shredder', 'Savvy', 'Seed Strain', 'Select', 'Shnicks Shnacks', 'Simply Herb',
+        'Smoke Temple', 'Smokerz', 'Softglass', 'Southie', 'Southie Adams', 'Space Ranger',
+        'Sun Extracts', 'Superflux', 'TerpX', 'The Botanist', 'The Cut', 'The Happy Farmer', 'The Lid',
+        'The1', 'Timeless', 'Triple 7', 'Uptown', 'Verano Reserve', 'Victory Natural Farms', 'Wana',
+        'Wyld', 'Zzzonked'
+      ];
+
+      // Autocomplete Logic
+      const initAutocomplete = (inputId, dropdownId) => {
+        const input = widgetWrapper.querySelector(`#${inputId}`);
+        const dropdown = widgetWrapper.querySelector(`#${dropdownId}`);
+
+        if (!input || !dropdown) return;
+
+        let currentFocus = -1;
+
+        const showSuggestions = (matches) => {
+          dropdown.innerHTML = '';
+
+          if (matches.length === 0) {
+            dropdown.classList.remove('tcb-show');
+            dropdown.setAttribute('aria-hidden', 'true');
+            return;
+          }
+
+          matches.forEach((brand, index) => {
+            const item = document.createElement('div');
+            item.className = 'tcb-autocomplete-item';
+            item.setAttribute('role', 'option');
+            item.setAttribute('data-value', brand);
+
+            const icon = document.createElement('span');
+            icon.className = 'tcb-autocomplete-item-icon';
+            icon.innerHTML = '🌿';
+
+            const text = document.createElement('span');
+            text.className = 'tcb-autocomplete-item-text';
+
+            const inputValue = input.value.toLowerCase();
+            const brandLower = brand.toLowerCase();
+            const startIndex = brandLower.indexOf(inputValue);
+
+            if (startIndex >= 0) {
+              const before = brand.substring(0, startIndex);
+              const match = brand.substring(startIndex, startIndex + input.value.length);
+              const after = brand.substring(startIndex + input.value.length);
+              text.innerHTML = `${before}<strong>${match}</strong>${after}`;
+            } else {
+              text.textContent = brand;
+            }
+
+            item.appendChild(icon);
+            item.appendChild(text);
+
+            item.addEventListener('click', () => {
+              input.value = brand;
+              dropdown.classList.remove('tcb-show');
+              dropdown.setAttribute('aria-hidden', 'true');
+
+              // Automatically trigger search
+              const encodedQuery = encodeURIComponent(brand);
+              window.location.href = `https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=${encodedQuery}`;
+            });
+
+            dropdown.appendChild(item);
+          });
+
+          dropdown.classList.add('tcb-show');
+          dropdown.setAttribute('aria-hidden', 'false');
+        };
+
+        input.addEventListener('input', () => {
+          const value = input.value.trim();
+          currentFocus = -1;
+
+          if (value.length < 2) {
+            dropdown.classList.remove('tcb-show');
+            dropdown.setAttribute('aria-hidden', 'true');
+            return;
+          }
+
+          const matches = brands.filter(brand =>
+            brand.toLowerCase().includes(value.toLowerCase())
+          ).slice(0, 8);
+
+          showSuggestions(matches);
+        });
+
+        input.addEventListener('keydown', (e) => {
+          const items = dropdown.querySelectorAll('.tcb-autocomplete-item');
+
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            currentFocus++;
+            if (currentFocus >= items.length) currentFocus = 0;
+            setActive(items);
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            currentFocus--;
+            if (currentFocus < 0) currentFocus = items.length - 1;
+            setActive(items);
+          } else if (e.key === 'Enter') {
+            if (currentFocus > -1 && items[currentFocus]) {
+              e.preventDefault();
+              const selectedBrand = items[currentFocus].getAttribute('data-value');
+              const encodedQuery = encodeURIComponent(selectedBrand);
+              window.location.href = `https://thecannabar.com/shop/?dtche%5Bpath%5D=products&dtche%5Bsearch%5D=${encodedQuery}`;
+            }
+          } else if (e.key === 'Escape') {
+            dropdown.classList.remove('tcb-show');
+            dropdown.setAttribute('aria-hidden', 'true');
+          }
+        });
+
+        const setActive = (items) => {
+          items.forEach((item, index) => {
+            if (index === currentFocus) {
+              item.classList.add('tcb-active');
+              item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            } else {
+              item.classList.remove('tcb-active');
+            }
+          });
+        };
+
+        document.addEventListener('click', (e) => {
+          if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('tcb-show');
+            dropdown.setAttribute('aria-hidden', 'true');
+          }
+        });
+      };
+
+      // Initialize autocomplete for all search inputs
+      initAutocomplete('tcbSearchInput', 'tcbAutocompleteList');
+      initAutocomplete('tcbMobileHeaderSearchInput', 'tcbMobileAutocompleteList');
+      initAutocomplete('tcbMobileSearchInput', 'tcbMobileMenuAutocompleteList');
+
+      console.log('TCB Navigation: Initialization complete');
+    }
+
+    // Cleanup function
+    function cleanupTCBNavigation() {
+      const body = document.body;
+      if (body.classList.contains('tcb-menu-open')) {
+        body.classList.remove('tcb-menu-open');
+      }
+    }
+
+    // WordPress/Elementor compatible initialization
+    function initWithDelay() {
+      // Multiple initialization attempts for WordPress/Elementor compatibility
+      const maxAttempts = 10;
+      let attempts = 0;
+
+      const tryInit = () => {
+        attempts++;
+        const wrapper = document.getElementById('tcb-nav-widget-wrapper');
+
+        if (wrapper && wrapper.querySelector('.tcb-accordion-trigger')) {
+          console.log('TCB Navigation: Found elements, initializing...');
+          initTCBNavigation();
+        } else if (attempts < maxAttempts) {
+          console.log('TCB Navigation: Elements not ready, retrying...', attempts);
+          setTimeout(tryInit, 200);
+        } else {
+          console.log('TCB Navigation: Max attempts reached, initializing anyway...');
+          initTCBNavigation();
+        }
+      };
+
+      tryInit();
+    }
+
+    // Initialize when DOM is ready - Enhanced for WordPress
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initWithDelay);
+    } else {
+      // DOM is already ready
+      setTimeout(initWithDelay, 100);
+    }
+
+    // Handle page unload
+    window.addEventListener('beforeunload', cleanupTCBNavigation);
+
+    // WordPress jQuery integration for better compatibility
+    if (window.jQuery) {
+      jQuery(document).ready(function ($) {
+        console.log('TCB Navigation: jQuery ready, initializing...');
+        setTimeout(initWithDelay, 300);
+      });
+
+      // Reinitialize if Elementor frontend is refreshed (for live editing)
+      jQuery(window).on('elementor/frontend/init', function () {
+        if (!isElementorEditor()) {
+          setTimeout(initWithDelay, 200);
+        }
+      });
+
+      // Handle WordPress AJAX and dynamic content loading
+      jQuery(document).ajaxComplete(function () {
+        setTimeout(() => {
+          if (document.getElementById('tcb-nav-widget-wrapper')) {
+            console.log('TCB Navigation: AJAX complete, reinitializing...');
+            initWithDelay();
+          }
+        }, 500);
+      });
+    }
+
+    // Also handle Elementor widgets initialization
+    if (window.elementorFrontend) {
+      window.elementorFrontend.hooks.addAction('frontend/element_ready/widget', function ($scope) {
+        if (!isElementorEditor() && $scope.find('#tcb-nav-widget-wrapper').length > 0) {
+          setTimeout(initWithDelay, 100);
+        }
+      });
+    }
+
+    // Additional fallback for WordPress themes that load scripts late
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        if (document.getElementById('tcb-nav-widget-wrapper') && !window.tcbNavigationInitialized) {
+          console.log('TCB Navigation: Window load fallback initialization...');
+          initWithDelay();
+        }
+      }, 500);
+
+      // Hide page transition overlay when page fully loads
+      const transitionOverlay = document.getElementById('tcb-page-transition-overlay');
+      if (transitionOverlay) {
+        // Small delay to ensure smooth transition
+        setTimeout(() => {
+          transitionOverlay.classList.remove('tcb-transition-active');
+        }, 100);
+      }
+    });
+  })();
+</script>
