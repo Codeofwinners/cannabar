@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#faf8f5">
+  <title>The Canna Bar — AI Budtender</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --cream: #f5f1eb;
+      --border: rgba(0,0,0,0.05);
+      --text: #1a1a1a;
+      --text-2: #4a4a4a;
+      --text-3: #8a8a8a;
+      --green: #1a7d42;
+      --green-dark: #145e33;
+      --indica: #6b21a8;
+      --indica-bg: #f3e8ff;
+      --sativa: #16a34a;
+      --sativa-bg: #dcfce7;
+      --hybrid: #d97706;
+      --hybrid-bg: #fef3c7;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .shell {
+      width: min(460px, 100vw);
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+    }
+    @media (min-width: 520px) {
+      .shell {
+        height: min(92dvh, 880px);
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        border: 1px solid var(--border);
+        animation: up 0.5s var(--ease) both;
+      }
+    }
+    @keyframes up { from { opacity:0; transform: translateY(16px); } }
+
+    /* ── Header ──────────────────────────── */
+    .hdr {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+      width: 100%;
+    }
+    .hdr-logo { width: 40px; height: 40px; border-radius: 12px; overflow: hidden; flex-shrink: 0; }
+    .hdr-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .hdr-name { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; }
+    .hdr-sub { font-size: 0.8rem; color: var(--text-3); display: flex; align-items: center; gap: 5px; }
+    .hdr-dot { width: 6px; height: 6px; border-radius: 50%; background: #34c759; }
+
+    /* ── Messages ─────────────────────────── */
+    .msgs {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scroll-behavior: smooth;
+    }
+    .msgs::-webkit-scrollbar { width: 0; }
+
+    .msg { max-width: 92%; animation: fin 0.3s var(--ease) both; }
+    .msg.user { align-self: flex-end; }
+    .msg.bot { align-self: flex-start; }
+    @keyframes fin { from { opacity: 0; transform: translateY(8px); } }
+
+    .bbl { font-size: 1.4rem; line-height: 1.6; }
+
+    .msg.user .bbl {
+      padding: 13px 18px;
+      background: var(--green);
+      color: white;
+      border-radius: 20px 20px 4px 20px;
+    }
+
+    .msg.bot .bbl {
+      padding: 2px 0;
+      color: var(--text);
+    }
+
+    .msg.bot .bbl p { margin-bottom: 10px; }
+    .msg.bot .bbl p:last-child { margin-bottom: 0; }
+    .msg.bot .bbl strong { font-weight: 700; }
+    .msg.bot .bbl a { color: var(--green); text-decoration: none; font-weight: 600; }
+    .msg.bot .bbl a:hover { text-decoration: underline; }
+    .msg.bot .bbl a.pc { text-decoration: none !important; color: var(--text) !important; }
+    .msg.bot .bbl a.pc:hover { text-decoration: none !important; }
+
+    .msg.bot .bbl ul {
+      list-style: none; padding: 0; margin: 10px 0;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .msg.bot .bbl li {
+      padding: 10px 14px;
+      background: var(--surface);
+      border-radius: 12px;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      border: 1px solid var(--border);
+    }
+
+    /* ── Product Cards ────────────────────── */
+    .pc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pc {
+      display: flex;
+      gap: 14px;
+      padding: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-decoration: none !important;
+      color: var(--text) !important;
+      transition: box-shadow 0.15s, transform 0.15s;
+      align-items: center;
+    }
+    .pc:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transform: translateY(-1px);
+    }
+
+    .pc-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: var(--cream);
+      flex-shrink: 0;
+    }
+
+    .pc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+
+    .pc-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .pc-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pc-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.02em;
+    }
+
+    .pc-brand {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-3);
+    }
+
+    .pc-strain {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pc-strain.indica, .pc-strain.indica-hybrid {
+      background: var(--indica);
+      color: white;
+    }
+    .pc-strain.sativa, .pc-strain.sativa-hybrid {
+      background: var(--sativa);
+      color: white;
+    }
+    .pc-strain.hybrid {
+      background: var(--hybrid);
+      color: white;
+    }
+
+    .pc-arrow {
+      width: 20px; height: 20px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      margin-top: 26px;
+      transition: transform 0.15s;
+    }
+    .pc:hover .pc-arrow { color: var(--green); transform: translateX(2px); }
+
+    /* ── CTA Buttons ──────────────────────── */
+    .ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .ctas a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: var(--green);
+      color: white !important;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none !important;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .ctas a:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .ctas a::after { content: '\2192'; }
+
+    /* ── Typing ───────────────────────────── */
+    .typing { align-self: flex-start; display: none; }
+    .typing.visible { display: block; }
+    .typing .bbl { display: flex; gap: 5px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px 20px 20px 4px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--text-3); animation: b 1.4s ease-in-out infinite; }
+    .dot:nth-child(2) { animation-delay: .15s; }
+    .dot:nth-child(3) { animation-delay: .3s; }
+    @keyframes b { 0%,60%,100% { transform:translateY(0); opacity:.3; } 30% { transform:translateY(-5px); opacity:.8; } }
+
+    /* ── Welcome ──────────────────────────── */
+    .welcome { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 20px; text-align:center; }
+    .w-m { width:120px; height:120px; margin-bottom:16px; animation: pop .5s var(--ease) .3s both; }
+    .w-m img { width:100%; height:100%; object-fit:contain; }
+    @keyframes pop { from { opacity:0; transform:scale(.5); } }
+    .w-t { font-size:2.2rem; font-weight:800; letter-spacing:-.03em; margin-bottom:6px; animation: fin .4s var(--ease) .5s both; }
+    .w-s { font-size:1.45rem; color:var(--text-2); max-width:300px; margin-bottom:28px; animation: fin .4s var(--ease) .6s both; }
+
+    .sugs { display:flex; flex-direction:column; gap:8px; width:100%; max-width:340px; animation: fin .4s var(--ease) .7s both; }
+    .sg {
+      display:flex; align-items:center; justify-content:space-between; width:100%; padding:14px 16px;
+      background:var(--surface); border:1px solid var(--border); border-radius:14px;
+      font-family:inherit; font-size:1.4rem; font-weight:600; color:var(--text);
+      cursor:pointer; text-align:left; transition: box-shadow .15s, transform .1s;
+    }
+    .sg:hover { box-shadow: 0 4px 12px rgba(0,0,0,.05); transform:translateY(-1px); }
+    .sg:active { transform:scale(.98); }
+    .sg svg { width:16px; height:16px; color:var(--text-3); flex-shrink:0; }
+    .sg:hover svg { color:var(--green); }
+
+    /* ── Input ─────────────────────────────── */
+    .input-area {
+      padding: 12px 16px 14px;
+      padding-bottom: max(14px, env(safe-area-inset-bottom));
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .input-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 8px 8px 8px 18px;
+    }
+    .input-field {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      padding: 8px 0;
+      resize: none;
+      max-height: 120px;
+      min-height: 24px;
+    }
+    .input-field::placeholder { color: var(--text-3); }
+    .send {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: var(--green);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .send:hover:not(:disabled) {
+      background: var(--green-dark);
+    }
+    .send:active:not(:disabled) {
+      transform: scale(0.93);
+    }
+    .send:disabled {
+      background: var(--cream);
+      color: var(--text-3);
+      cursor: default;
+    }
+    .send svg { width: 22px; height: 22px; }
+    .ft { text-align:center; margin-top:8px; font-size:.75rem; color:var(--text-3); letter-spacing: 0.02em; }
+
+    .toast { position:fixed; top:20px; left:50%; transform:translateX(-50%) translateY(-100px); background:#e53e3e; color:white; padding:10px 20px; border-radius:12px; font-size:1.4rem; font-weight:600; z-index:100; transition: transform .4s var(--ease); }
+    .toast.show { transform:translateX(-50%) translateY(0); }
+
+    @media (max-width:519px) {
+      body { background: var(--surface); }
+      .shell { border-radius: 0; width: 100%; }
+      .hdr { border-radius: 0; }
+      .input-area { border-radius: 0; }
+    }
+    *:focus-visible { outline:none; }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; } }
+  </style>
+</head>
+<body>
+  <div class="toast" id="toast"></div>
+  <div class="shell">
+    <div class="hdr">
+      <div class="hdr-logo"><img src="/mascot.png" alt=""></div>
+      <div>
+        <div class="hdr-name">The Canna Bar</div>
+        <div class="hdr-sub"><span class="hdr-dot"></span> AI Budtender</div>
+      </div>
+    </div>
+
+    <div class="msgs" id="msgs">
+      <div class="welcome" id="welcome">
+        <div class="w-m"><img src="/mascot.png" alt=""></div>
+        <div class="w-t">What can I help you find?</div>
+        <div class="w-s">Your AI budtender. Ask about strains, effects, or what's in stock.</div>
+        <div class="sugs">
+          <button class="sg" data-q="What indica strains do you have right now? I want something chill for the evening"><span>Chill indica strains</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          <button class="sg" data-q="What are your deals and specials right now?"><span>Today's deals &amp; specials</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          <button class="sg" data-q="I want a smooth vape that tastes good — what do you recommend under $60?"><span>Best vapes under $60</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="typing" id="typing"><div class="bbl"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-row">
+        <textarea class="input-field" id="input" placeholder="Ask anything..." rows="1"></textarea>
+        <button class="send" id="sendBtn" disabled aria-label="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"/>
+            <path d="m5 12 7-7 7 7"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ft">In-store pickup &middot; 58 Main St, Matawan NJ</div>
+    </div>
+  </div>
+
+  <script>
+    let sid=null,busy=false;
+    const $=id=>document.getElementById(id);
+    const msgs=$('msgs'),welcome=$('welcome'),typing=$('typing'),input=$('input'),sendBtn=$('sendBtn'),toast=$('toast');
+
+    input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,120)+'px';sendBtn.disabled=!input.value.trim()||busy;});
+    input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();if(!sendBtn.disabled)go();}});
+    sendBtn.addEventListener('click',go);
+    document.querySelectorAll('.sg').forEach(b=>{b.addEventListener('click',()=>{input.value=b.dataset.q;sendBtn.disabled=false;go();});});
+
+    async function go(){
+      const text=input.value.trim();if(!text||busy)return;
+      if(welcome)welcome.style.display='none';
+      addMsg('user',text);
+      input.value='';input.style.height='auto';sendBtn.disabled=true;
+      busy=true;typing.classList.add('visible');scroll();
+      try{
+        const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,sessionId:sid})});
+        const d=await r.json();if(!r.ok)throw new Error(d.error||'Failed');
+        sid=d.sessionId;typing.classList.remove('visible');addMsg('bot',d.reply);
+      }catch(e){typing.classList.remove('visible');err(e.message);addMsg('bot',"Something went wrong — please try again.");}
+      busy=false;sendBtn.disabled=!input.value.trim();input.focus();
+    }
+
+    function addMsg(role,text){
+      const el=document.createElement('div');el.className=`msg ${role}`;
+      const b=document.createElement('div');b.className='bbl';
+      b.innerHTML=role==='bot'?fmt(text):esc(text);
+      el.appendChild(b);msgs.insertBefore(el,typing);scroll();
+    }
+
+    function strainClass(s) {
+      if (!s) return '';
+      const l = s.toLowerCase().replace(/[^a-z]/g, '');
+      if (l.includes('indica')) return l.includes('hybrid') ? 'indica-hybrid' : 'indica';
+      if (l.includes('sativa')) return l.includes('hybrid') ? 'sativa-hybrid' : 'sativa';
+      if (l.includes('hybrid')) return 'hybrid';
+      return '';
+    }
+
+    function fmt(text) {
+      // Step 1: Split into AI text and product cards BEFORE any formatting
+      const cardTokens = [];
+      const ctaTokens = [];
+      let aiText = text;
+
+      // Extract product cards
+      aiText = aiText.replace(/\{\{PRODUCT\|([^}]+)\}\}/g, (_, d) => { cardTokens.push(d); return ''; });
+
+      // Extract CTA links
+      aiText = aiText.replace(/\[(?:View Full Menu|View All Specials|Browse \w+)\]\([^)]+\)/g, m => { ctaTokens.push(m); return ''; });
+
+      // Step 2: Format ONLY the AI text
+      const links = [];
+      let s = aiText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, l, u) => { links.push({l,u}); return `%%L${links.length-1}%%`; });
+
+      s = esc(s);
+      s = s.replace(/%%L(\d+)%%/g, (_, i) => { const {l,u} = links[+i]; return `<a href="${u.replace(/"/g,'&quot;')}" target="_blank" rel="noopener">${l}</a>`; });
+      s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      s = s.replace(/^[-•] (.+)$/gm, '<li>$1</li>');
+      s = s.replace(/(<li>[\s\S]*?<\/li>\n?)+/g, '<ul>$&</ul>');
+      s = s.split(/\n{2,}/).filter(p => p.trim()).map(p => `<p>${p.trim()}</p>`).join('');
+      s = s.replace(/\n/g, '<br>');
+      s = s.replace(/<p>\s*(<br>)?\s*<\/p>/g, '');
+
+      // Step 3: Render product cards as clean HTML OUTSIDE of paragraph flow
+      if (cardTokens.length > 0) {
+        s += '<div class="pc-list">';
+        for (const d of cardTokens) {
+          const p = d.split('|');
+          const [name='',price='',brand='',url='',img='',strain=''] = p;
+          const sc = strainClass(strain);
+          s += `<a class="pc" href="${esc(url)}" target="_blank" rel="noopener">`
+            + (img ? `<img class="pc-img" src="${esc(img)}" alt="" loading="lazy" onerror="this.style.display='none'">` : '')
+            + `<div class="pc-body">`
+            + `<div class="pc-name">${esc(name)}</div>`
+            + `<div class="pc-meta">`
+            + (price ? `<span class="pc-price">${esc(price)}</span>` : '')
+            + (brand ? `<span class="pc-brand">${esc(brand)}</span>` : '')
+            + (sc ? `<span class="pc-strain ${sc}">${esc(strain)}</span>` : '')
+            + `</div></div>`
+            + `<svg class="pc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>`
+            + `</a>`;
+        }
+        s += '</div>';
+      }
+
+      // Step 4: Render CTA buttons
+      if (ctaTokens.length > 0) {
+        s += '<div class="ctas">';
+        for (const c of ctaTokens) {
+          const m = c.match(/\[([^\]]+)\]\(([^)]+)\)/);
+          if (m) s += `<a href="${esc(m[2])}" target="_blank" rel="noopener">${m[1]}</a>`;
+        }
+        s += '</div>';
+      }
+
+      return s;
+    }
+
+    function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+    function scroll(){requestAnimationFrame(()=>{msgs.scrollTop=msgs.scrollHeight;});}
+    function err(m){toast.textContent=m;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),4000);}
+    input.focus();
+  </script>
+</body>
+</html>
